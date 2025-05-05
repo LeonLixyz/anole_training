@@ -163,11 +163,20 @@ def tokenize_dataset(train_split, eval_split, test_split, model, processor, **kw
     tokenized_data = dict()
 
     data_name = kwargs.pop("data_name")
+    
+    # Add code to analyze and print raw text lengths
+    if train_split:
+        input_lengths = [len(example.get('input_text', '')) for example in train_split]
+        label_lengths = [len(example.get('label_text', '')) for example in train_split]
+        
+        print(f"Raw text statistics for training data:")
+        print(f"Input text - Min: {min(input_lengths)}, Max: {max(input_lengths)}, Avg: {sum(input_lengths)/len(input_lengths):.2f}")
+        print(f"Label text - Min: {min(label_lengths)}, Max: {max(label_lengths)}, Avg: {sum(label_lengths)/len(label_lengths):.2f}")
 
-    max_source_length = 2600
+    max_source_length = max(input_lengths)
     print(f"Max source length: {max_source_length}")
 
-    max_target_length = 1300
+    max_target_length = int(sum(label_lengths) / len(label_lengths))
     print(f"Max target length: {max_target_length}")
 
     if not kwargs["interleave"]:

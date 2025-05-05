@@ -26,9 +26,9 @@ from utils.evaluator import VisualizationEvaluator
 
 logger = logging.getLogger(__name__)
 
-WANDB_API_KEY = "<YOUR_WANDB_KEY_API>"
-WANDB_ENTITY = "<YOUR_WANDB_ENTITY>"
-PROJECT_NAME = "<YOUR_PROJECT_NAME>"
+WANDB_API_KEY = "597c5c82ba23f774e72db5fc76e9d82b620d5d39"
+WANDB_ENTITY = "leonli66"
+PROJECT_NAME = "anole-ai"
 
 def image_to_base64(img):
     """Convert PIL Image to base64 string for JSON serialization"""

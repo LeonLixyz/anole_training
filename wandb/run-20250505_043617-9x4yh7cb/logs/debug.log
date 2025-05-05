@@ -1,0 +1,29 @@
+2025-05-05 04:36:17,400 INFO    MainThread:18384 [wandb_setup.py:_flush():76] Current SDK version is 0.17.4
+2025-05-05 04:36:17,401 INFO    MainThread:18384 [wandb_setup.py:_flush():76] Configure stats pid to 18384
+2025-05-05 04:36:17,401 INFO    MainThread:18384 [wandb_setup.py:_flush():76] Loading settings from /root/.config/wandb/settings
+2025-05-05 04:36:17,401 INFO    MainThread:18384 [wandb_setup.py:_flush():76] Loading settings from /workspace/anole_training/wandb/settings
+2025-05-05 04:36:17,401 INFO    MainThread:18384 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2025-05-05 04:36:17,401 INFO    MainThread:18384 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'train.py', 'program_abspath': '/workspace/anole_training/train.py', 'program': '/workspace/anole_training/train.py'}
+2025-05-05 04:36:17,401 INFO    MainThread:18384 [wandb_setup.py:_flush():76] Applying login settings: {'api_key': '***REDACTED***'}
+2025-05-05 04:36:17,401 INFO    MainThread:18384 [wandb_setup.py:_flush():76] Applying login settings: {'api_key': '***REDACTED***'}
+2025-05-05 04:36:17,401 INFO    MainThread:18384 [wandb_setup.py:_flush():76] Applying login settings: {}
+2025-05-05 04:36:17,401 INFO    MainThread:18384 [wandb_init.py:_log_setup():529] Logging user logs to /workspace/anole_training/wandb/run-20250505_043617-9x4yh7cb/logs/debug.log
+2025-05-05 04:36:17,401 INFO    MainThread:18384 [wandb_init.py:_log_setup():530] Logging internal logs to /workspace/anole_training/wandb/run-20250505_043617-9x4yh7cb/logs/debug-internal.log
+2025-05-05 04:36:17,401 INFO    MainThread:18384 [wandb_init.py:init():569] calling init triggers
+2025-05-05 04:36:17,401 INFO    MainThread:18384 [wandb_init.py:init():576] wandb.init called with sweep_config: {}
+config: {}
+2025-05-05 04:36:17,401 INFO    MainThread:18384 [wandb_init.py:init():619] starting backend
+2025-05-05 04:36:17,401 INFO    MainThread:18384 [wandb_init.py:init():623] setting up manager
+2025-05-05 04:36:17,403 INFO    MainThread:18384 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2025-05-05 04:36:17,404 INFO    MainThread:18384 [wandb_init.py:init():631] backend started and connected
+2025-05-05 04:36:17,408 INFO    MainThread:18384 [wandb_init.py:init():720] updated telemetry
+2025-05-05 04:36:17,411 INFO    MainThread:18384 [wandb_init.py:init():753] communicating run to backend with 90.0 second timeout
+2025-05-05 04:36:17,674 ERROR   MainThread:18384 [wandb_init.py:init():779] encountered error: It appears that you do not have permission to access the requested resource. Please reach out to the project owner to grant you access. If you have the correct permissions, verify that there are no issues with your networking setup.(Error 404: Not Found)
+2025-05-05 04:36:17,674 ERROR   MainThread:18384 [wandb_init.py:init():1191] error in wandb.init()
+Traceback (most recent call last):
+  File "/venv/main/lib/python3.10/site-packages/wandb/sdk/wandb_init.py", line 1181, in init
+    return wi.init()
+  File "/venv/main/lib/python3.10/site-packages/wandb/sdk/wandb_init.py", line 785, in init
+    raise error
+wandb.errors.CommError: It appears that you do not have permission to access the requested resource. Please reach out to the project owner to grant you access. If you have the correct permissions, verify that there are no issues with your networking setup.(Error 404: Not Found)
+2025-05-05 04:36:18,823 WARNING MsgRouterThr:18384 [router.py:message_loop():77] message_loop has been closed

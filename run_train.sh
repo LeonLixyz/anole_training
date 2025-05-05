@@ -5,7 +5,7 @@
 
 # Configuration values
 NODE_NUM=1
-GPU_NUM_PER_NODE=4
+GPU_NUM_PER_NODE=8
 RANK=0
 MASTER_ADDR="localhost"
 MASTER_PORT=29500
@@ -39,7 +39,7 @@ torchrun --nnodes $NODE_NUM \
     --input_format anole \
     --output $OUTPUT_PATH \
     --note $NOTE \
-    --report_to none \
+    --report_to "wandb" \
     --do_train \
     --custom_dataset_path "$FORMATTED_DATA_PATH" \
     --save_dataset \
