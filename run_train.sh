@@ -13,7 +13,7 @@ OUTPUT_PATH="outputs/geometry_reasoning_run"
 NOTE="geometry_reasoning_run"
 DATASET="geometry_reasoning" 
 DATA_DIR="formatted_data"  # Point to our formatted data directory
-FORMATTED_DATA_PATH="formatted_data/formatted_data_normalized.json"  # Path to our formatted JSON
+FORMATTED_DATA_PATH="formatted_data/all_datasets.json"  # Path to our formatted JSON
 
 # Create data directory if it doesn't exist
 mkdir -p $DATA_DIR
