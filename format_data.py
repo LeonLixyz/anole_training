@@ -106,14 +106,14 @@ def format_dataset(dataset, output_dir="formatted_data"):
         # Replace image placeholders in the problem statement
         modified_question = question
         for i in range(1, len(problem_images) + 1):
-            placeholder = f"[problem_image_{i}]"
+            placeholder = f"<image_start>[problem_image_{i}]<image_end>"
             if placeholder in modified_question:
                 modified_question = modified_question.replace(placeholder, "<image>")
         
         # Replace image placeholders in the reasoning 
         modified_reasoning = reasoning
         for i in range(1, len(reasoning_images) + 1):
-            placeholder = f"[reasoning_image_{i}]"
+            placeholder = f"<image_start>[reasoning_image_{i}]<image_end>"
             if placeholder in modified_reasoning:
                 modified_reasoning = modified_reasoning.replace(placeholder, "<image>")
         
@@ -167,33 +167,98 @@ def format_dataset(dataset, output_dir="formatted_data"):
 
 def main():
     parser = argparse.ArgumentParser(description="Format dataset for training")
-    parser.add_argument("--dataset_name", type=str, default="vlm-reasoning-cot/vlm_reasoning_geometry_auxlines", 
-                       help="HuggingFace dataset name or path")
+    parser.add_argument("--dataset_names", type=str, nargs="+", 
+                        default=["vlm-reasoning-cot/ARC-AGI", 
+                                 "vlm-reasoning-cot/visual_jigsaw",
+                                 "vlm-reasoning-cot/graph",
+                                 "vlm-reasoning-cot/Mazes",
+                                 "vlm-reasoning-cot/Physics",
+                                 "vlm-reasoning-cot/Tetris",
+                                 "vlm-reasoning-cot/MATH_geometry"],
+                        help="List of HuggingFace dataset names or paths to process sequentially")
     parser.add_argument("--output_dir", type=str, default="formatted_data",
-                       help="Output directory for formatted data")
+                       help="Base output directory for formatted data")
     parser.add_argument("--debug", action="store_true",
                       help="Enable debug mode (processes only a few examples)")
     args = parser.parse_args()
     
-    print(f"Loading dataset {args.dataset_name}...")
-    dataset = load_dataset(args.dataset_name, trust_remote_code=True)
+    # Create the base output directory
+    os.makedirs(args.output_dir, exist_ok=True)
     
-    print("Dataset loaded with the following splits:", dataset.keys())
-    print(f"Train split size: {len(dataset['train'])}")
+    # To collect all formatted data from all datasets
+    all_formatted_data = []
     
-    print("First example feature keys:", list(dataset['train'][0].keys()))
+    # Process each dataset sequentially
+    for dataset_name in args.dataset_names:
+        print(f"\n{'='*50}")
+        print(f"PROCESSING DATASET: {dataset_name}")
+        print(f"{'='*50}\n")
+        
+        # Create dataset-specific output directory (just for images)
+        dataset_output_dir = os.path.join(args.output_dir, dataset_name.split('/')[-1])
+        os.makedirs(dataset_output_dir, exist_ok=True)
+        
+        try:
+            print(f"Loading dataset {dataset_name}...")
+            dataset = load_dataset(dataset_name, trust_remote_code=True)
+            
+            print("Dataset loaded with the following splits:", dataset.keys())
+            print(f"Train split size: {len(dataset['train'])}")
+            
+            print("First example feature keys:", list(dataset['train'][0].keys()))
+            
+            # In debug mode, only process a few examples
+            if args.debug:
+                print("Debug mode enabled, processing only 5 examples")
+                dataset['train'] = dataset['train'].select(range(min(5, len(dataset['train']))))
+            
+            print(f"Formatting dataset {dataset_name}...")
+            # Process dataset and get formatted data
+            formatted_data = format_dataset(dataset['train'], dataset_output_dir)
+            
+            # Add dataset name to each example for tracking purposes
+            for example in formatted_data:
+                example["dataset_source"] = dataset_name
+            
+            # Add this dataset's formatted data to the full collection
+            all_formatted_data.extend(formatted_data)
+            
+            print(f"Done with {dataset_name}!")
+            print(f"Added {len(formatted_data)} examples")
+            
+        except Exception as e:
+            print(f"Error processing dataset {dataset_name}: {e}")
+            print(f"Skipping to next dataset...")
+            continue
     
-    # In debug mode, only process a few examples
-    if args.debug:
-        print("Debug mode enabled, processing only 5 examples")
-        dataset['train'] = dataset['train'].select(range(min(5, len(dataset['train']))))
+    # Save the combined formatted data to a single JSON file
+    combined_json_path = os.path.join(args.output_dir, "all_datasets.json")
     
-    print("Formatting dataset...")
-    formatted_data = format_dataset(dataset['train'], args.output_dir)
+    # Convert to serializable format for JSON
+    serializable_data = []
+    for item in all_formatted_data:
+        serializable_item = {
+            "input_text": item["input_text"],
+            "input_img_paths": item["input_img_paths"],
+            "label_text": item["label_text"],
+            "label_img_paths": item["label_img_paths"],
+            "task": item["task"],
+            "train_task": item["train_task"],
+            "dataset_source": item.get("dataset_source", "unknown")
+        }
+        serializable_data.append(serializable_item)
     
-    print("Done!")
-    print(f"Created {len(formatted_data)} examples")
-    print(f"Data saved to {args.output_dir}")
+    # Wrap the list in a dictionary with 'train' key
+    serializable_dict = {
+        "train": serializable_data
+    }
+    
+    with open(combined_json_path, 'w') as f:
+        json.dump(serializable_dict, f, indent=2)
+    
+    print("\nAll datasets processed!")
+    print(f"Total examples collected: {len(all_formatted_data)}")
+    print(f"Combined data saved to {combined_json_path}")
 
 if __name__ == "__main__":
     main() 
