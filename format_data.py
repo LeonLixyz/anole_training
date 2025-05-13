@@ -169,13 +169,21 @@ def main():
     parser = argparse.ArgumentParser(description="Format dataset for training")
     parser.add_argument("--dataset_names", type=str, nargs="+", 
                         default=[
-                                # "vlm-reasoning-cot/ARC-AGI", 
-                                #  "vlm-reasoning-cot/visual_jigsaw",
+                                 "vlm-reasoning-cot/ARC-AGI", 
+                                 "vlm-reasoning-cot/visual_jigsaw",
                                  "vlm-reasoning-cot/graph",
-                                #  "vlm-reasoning-cot/Mazes",
+                                 "vlm-reasoning-cot/Mazes",
                                  "vlm-reasoning-cot/Physics",
-                                #  "vlm-reasoning-cot/Tetris",
-                                 "vlm-reasoning-cot/MATH_geometry"],
+                                 "vlm-reasoning-cot/Tetris",
+                                 "vlm-reasoning-cot/MATH_geometry",
+                                 "vlm-reasoning-cot/chem",
+                                 "vlm-reasoning-cot/robot_planning",
+                                 "vlm-reasoning-cot/checker",
+                                 "vlm-reasoning-cot/connect_4",
+                                 "vlm-reasoning-cot/cipher",
+                                 "vlm-reasoning-cot/embodied_cot",
+                                 "vlm-reasoning-cot/visual_search",
+                                 ],
                         help="List of HuggingFace dataset names or paths to process sequentially")
     parser.add_argument("--output_dir", type=str, default="formatted_data",
                        help="Base output directory for formatted data")

@@ -16,5 +16,5 @@ eval:
 save:
   save_strategy: "steps"
   save_steps: 50
-logging[[]:
+logging:
   logging_step: 1

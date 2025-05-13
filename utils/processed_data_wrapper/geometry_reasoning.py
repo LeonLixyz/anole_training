@@ -102,31 +102,15 @@ class GeometryReasoning(datasets.GeneratorBasedBuilder):
             item_task = item.get("task", "reasoning")
             item_train_task = item.get("train_task", "interleaved_reasoning")
             
-            # Only include items that match requested tasks and modes
             if ((not tasks or item_task in tasks) and 
                 (not modes or item_train_task in modes)):
-                # Ensure all required fields exist
                 input_text = item.get("input_text", "")
                 label_text = item.get("label_text", "")
                 
-                # Make sure inputs have exactly one image tag if images exist
                 input_img_paths = item.get("input_img_paths", [])
-                if input_img_paths and "<image>" not in input_text:
-                    # Add image tag if needed
-                    input_text += " <image>"
-                elif input_img_paths and input_text.count("<image>") > 1:
-                    # Replace multiple image tags with a single one
-                    input_text = input_text.replace("<image>", "", input_text.count("<image>") - 1) + "<image>"
                 
-                # Do the same for label text
                 label_img_paths = item.get("label_img_paths", [])
-                if label_img_paths and "<image>" not in label_text:
-                    # Add image tag if needed
-                    label_text += " <image>"
-                elif label_img_paths and label_text.count("<image>") > 1:
-                    # Replace multiple image tags with a single one
-                    label_text = label_text.replace("<image>", "", label_text.count("<image>") - 1) + "<image>"
-                
+            
                 example = {
                     "input_text": input_text,
                     "input_img_paths": input_img_paths,

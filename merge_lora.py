@@ -22,64 +22,216 @@ def _sha256(fname, chunk=1024 * 1024):
             h.update(b)
     return h.hexdigest()
 
+def convert_hf_to_chameleon(state_dict):
+    """
+    Convert Hugging Face model format to Chameleon format
+    """
+    chameleon_dict = {}
+    
+    # Mapping rules
+    for key, value in state_dict.items():
+        # Skip VQ model components
+        if 'vqmodel' in key:
+            continue
+            
+        # Embedding layer
+        if key == 'model.embed_tokens.weight':
+            chameleon_dict['tok_embeddings.weight'] = value
+        
+        # Match layers.X patterns
+        elif 'model.layers.' in key:
+            # Extract layer number
+            parts = key.split('.')
+            layer_idx = parts[2]
+            
+            # Attention component mappings
+            if 'self_attn.q_proj.weight' in key:
+                # Store for later concatenation
+                q_weight = value
+                chameleon_key = f'layers.{layer_idx}.attention.q_weight_temp'
+                chameleon_dict[chameleon_key] = q_weight
+            
+            elif 'self_attn.k_proj.weight' in key:
+                # Store for later concatenation
+                k_weight = value
+                chameleon_key = f'layers.{layer_idx}.attention.k_weight_temp'
+                chameleon_dict[chameleon_key] = k_weight
+            
+            elif 'self_attn.v_proj.weight' in key:
+                # Store for later concatenation
+                v_weight = value
+                chameleon_key = f'layers.{layer_idx}.attention.v_weight_temp'
+                chameleon_dict[chameleon_key] = v_weight
+            
+            elif 'self_attn.o_proj.weight' in key:
+                chameleon_key = f'layers.{layer_idx}.attention.wo.weight'
+                chameleon_dict[chameleon_key] = value
+            
+            # Normalization layers
+            elif 'self_attn.q_norm.weight' in key:
+                chameleon_key = f'layers.{layer_idx}.attention.q_normalization.weight'
+                chameleon_dict[chameleon_key] = value
+            
+            elif 'self_attn.q_norm.bias' in key:
+                chameleon_key = f'layers.{layer_idx}.attention.q_normalization.bias'
+                chameleon_dict[chameleon_key] = value
+            
+            elif 'self_attn.k_norm.weight' in key:
+                chameleon_key = f'layers.{layer_idx}.attention.k_normalization.weight'
+                chameleon_dict[chameleon_key] = value
+            
+            elif 'self_attn.k_norm.bias' in key:
+                chameleon_key = f'layers.{layer_idx}.attention.k_normalization.bias'
+                chameleon_dict[chameleon_key] = value
+            
+            # Feed forward components
+            elif 'mlp.gate_proj.weight' in key:
+                gate_weight = value
+                chameleon_key = f'layers.{layer_idx}.feed_forward.gate_weight_temp'
+                chameleon_dict[chameleon_key] = gate_weight
+            
+            elif 'mlp.up_proj.weight' in key:
+                up_weight = value
+                chameleon_key = f'layers.{layer_idx}.feed_forward.up_weight_temp'
+                chameleon_dict[chameleon_key] = up_weight
+            
+            elif 'mlp.down_proj.weight' in key:
+                chameleon_key = f'layers.{layer_idx}.feed_forward.w2.weight'
+                chameleon_dict[chameleon_key] = value
+            
+            # Layer norms
+            elif 'input_layernorm.weight' in key:
+                chameleon_key = f'layers.{layer_idx}.attention_norm.weight'
+                chameleon_dict[chameleon_key] = value
+            
+            elif 'post_attention_layernorm.weight' in key:
+                chameleon_key = f'layers.{layer_idx}.ffn_norm.weight'
+                chameleon_dict[chameleon_key] = value
+        
+        # Model final norm and output
+        elif key == 'model.norm.weight':
+            chameleon_dict['norm.weight'] = value
+        
+        elif key == 'lm_head.weight':
+            chameleon_dict['output.weight'] = value
+    
+    # Process all layers to combine Q, K, V weights and feed forward
+    for layer_idx in range(32):  # Assuming up to 32 layers
+        # Check if we have all three weights
+        q_key = f'layers.{layer_idx}.attention.q_weight_temp'
+        k_key = f'layers.{layer_idx}.attention.k_weight_temp'
+        v_key = f'layers.{layer_idx}.attention.v_weight_temp'
+        
+        if q_key in chameleon_dict and k_key in chameleon_dict and v_key in chameleon_dict:
+            # Concatenate QKV
+            q_weight = chameleon_dict.pop(q_key)
+            k_weight = chameleon_dict.pop(k_key)
+            v_weight = chameleon_dict.pop(v_key)
+            
+            # Concatenate the weights along appropriate dimension
+            qkv_weight = torch.cat([q_weight, k_weight, v_weight], dim=0)
+            chameleon_dict[f'layers.{layer_idx}.attention.wqkv.weight'] = qkv_weight
+        
+        # Check if we have both feed forward weights
+        gate_key = f'layers.{layer_idx}.feed_forward.gate_weight_temp'
+        up_key = f'layers.{layer_idx}.feed_forward.up_weight_temp'
+        
+        if gate_key in chameleon_dict and up_key in chameleon_dict:
+            # Concatenate gate and up projections
+            gate_weight = chameleon_dict.pop(gate_key)
+            up_weight = chameleon_dict.pop(up_key)
+            
+            # Concatenate the weights
+            w13_weight = torch.cat([gate_weight, up_weight], dim=0)
+            chameleon_dict[f'layers.{layer_idx}.feed_forward.w13.weight'] = w13_weight
+    
+    return chameleon_dict
+
 def produce_checkpoint_files(model, out_dir):
     """
-    Produce consolidated format files compatible with Chameleon loader:
-    - consolidated.pth
-    - config.json
-    - params.json
-    - consolidate_params.json
-    - checklist.chk
+    Produce only consolidated.pth file with transformer backbone only
     """
     out_dir = pathlib.Path(out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
 
-    # 1. consolidated.pth (single-file pickled state-dict with correct structure)
-    cons_file = out_dir / "consolidated.pth"
-    
-    # Create the correct structure expected by Chameleon loader
-    # The loader expects a dict with a 'model' key
+    # Get state dict
     state_dict = model.state_dict()
-    save_dict = {"model": state_dict}
     
+    print(f"Original state dict size: {len(state_dict)} keys")
+    
+    # Convert HF format to Chameleon format
+    print("Converting weights from HF format to Chameleon format...")
+    chameleon_dict = convert_hf_to_chameleon(state_dict)
+    
+    print(f"Converted state dict size: {len(chameleon_dict)} keys")
+    print(f"Sample keys: {list(chameleon_dict.keys())[:5]}")
+    
+    # Create the output dictionary with the expected format
+    save_dict = {"model": chameleon_dict}
+    
+    # Convert to half precision
+    for k, v in save_dict["model"].items():
+        if v.dtype == torch.float32:
+            save_dict["model"][k] = v.half()
+    
+    # Save consolidated.pth file
+    cons_file = out_dir / "consolidated.pth"
     torch.save(save_dict, cons_file)
-    print(f"Saved consolidated weights to {cons_file}")
+    print(f"Saved consolidated weights to {cons_file} in half precision")
 
-    # 2. config.json (model config)
-    cfg_file = out_dir / "config.json"
-    if hasattr(model, 'config'):
-        with cfg_file.open("w") as f:
-            if hasattr(model.config, 'to_dict'):
-                json.dump(model.config.to_dict(), f, indent=2)
-            else:
-                json.dump(model.config, f, indent=2)
+def print_model_structure(model):
+    """
+    Print model structure to show components
+    """
+    print("\n=== MODEL STRUCTURE ===")
+    # Print top-level attributes
+    print("Top-level components:")
+    for name, child in model.named_children():
+        print(f"  - {name}")
+    
+    # Print detailed structure
+    print("\nDetailed structure (first few levels):")
+    for name, _ in model.named_modules():
+        if name.count('.') <= 2:  # Limit depth to make output manageable
+            print(f"  - {name}")
+    
+    # Print sample state dict keys
+    print("\nSample state dict keys:")
+    state_dict = model.state_dict()
+    keys = list(state_dict.keys())
+    for key in keys[:10]:  # Show first 10 keys
+        print(f"  - {key}")
+
+def print_lora_components(model):
+    """
+    Print LoRA components to check what was trained
+    """
+    print("\n=== LORA COMPONENTS ===")
+    lora_modules = []
+    
+    # Get adapter name
+    adapter_name = list(model.peft_config.keys())[0] if hasattr(model, 'peft_config') else None
+    if not adapter_name:
+        print("No LoRA adapter found")
+        return
+    
+    # Check model for LoRA modules
+    for name, module in model.named_modules():
+        if hasattr(module, "lora_A") or hasattr(module, "lora_B"):
+            lora_modules.append(name)
+    
+    print(f"Found {len(lora_modules)} LoRA modules:")
+    for module in lora_modules:
+        print(f"  - {module}")
+    
+    # Check if any VQ model components were trained
+    vq_lora = [m for m in lora_modules if 'vq_model' in m]
+    if vq_lora:
+        print(f"\nWARNING: Found {len(vq_lora)} LoRA modules in VQ model:")
+        for module in vq_lora:
+            print(f"  - {module}")
     else:
-        with cfg_file.open("w") as f:
-            json.dump({}, f)
-
-    # 3. params.json (tensor names & shapes)
-    pjson = {
-        k: list(v.shape) for k, v in state_dict.items()
-    }
-    with (out_dir / "params.json").open("w") as f:
-        json.dump(pjson, f, indent=2)
-
-    # 4. consolidate_params.json (manifest)
-    with (out_dir / "consolidate_params.json").open("w") as f:
-        json.dump(
-            {
-                "model_file": cons_file.name,
-                "num_parameters": sum(p.numel() for p in model.parameters()),
-                "sha256": _sha256(cons_file),
-            },
-            f,
-            indent=2,
-        )
-
-    # 5. checklist.chk (empty marker file)
-    (out_dir / "checklist.chk").touch()
-
-    print("✅ Created consolidated checkpoint files compatible with Chameleon loader")
+        print("\nNo LoRA modules found in VQ model components - good!")
 
 def merge_and_upload(
     adapter_path,
@@ -137,12 +289,18 @@ def merge_and_upload(
             device_map="auto",
         )
     
+    # Print model structure to show components
+    print_model_structure(base_model)
+    
     # Load tokenizer
     base_tokenizer = AutoTokenizer.from_pretrained(model_path)
     
     # Load adapter weights
     print("Loading adapter weights...")
     model = PeftModel.from_pretrained(base_model, adapter_path)
+    
+    # Print LoRA components
+    print_lora_components(model)
     
     # Verify adapter weights if requested
     if verify:
@@ -177,30 +335,14 @@ def merge_and_upload(
     print("Merging weights...")
     merged_model = model.merge_and_unload()
     
-    # Create both formats
+    # Create output directory
+    os.makedirs(output_path, exist_ok=True)
     
-    # 1. First save in standard HuggingFace format (safetensors)
-    print(f"Saving model in HuggingFace format to {output_path}...")
-    merged_model.save_pretrained(output_path, safe_serialization=True)
-    base_tokenizer.save_pretrained(output_path)
-    
-    # Copy processor config and any other necessary files
-    for file in ["processor_config.json", "preprocessor_config.json"]:
-        if os.path.exists(os.path.join(adapter_path, file)):
-            shutil.copy(
-                os.path.join(adapter_path, file),
-                os.path.join(output_path, file)
-            )
-    
-    # Copy README if provided
-    if readme_path and os.path.exists(readme_path):
-        shutil.copy(readme_path, os.path.join(output_path, "README.md"))
-    
-    # 2. Create consolidated checkpoint files in Chameleon-compatible format
-    print("Creating consolidated checkpoint format...")
+    # Save checkpoint in Chameleon-compatible format
+    print("Creating consolidated checkpoint in half precision (fp16)...")
     produce_checkpoint_files(merged_model, output_path)
     
-    print("Model successfully merged and saved in both formats!")
+    print("Model successfully merged and saved!")
     
     # Upload to Hugging Face
     print(f"Uploading model to {repo_name}...")
@@ -209,11 +351,55 @@ def merge_and_upload(
     # Create repository if it doesn't exist
     api.create_repo(repo_name, private=private, exist_ok=True)
     
-    # Upload all files
-    api.upload_folder(
-        folder_path=output_path,
+    # Upload only the consolidated.pth file
+    api.upload_file(
+        path_or_fileobj=os.path.join(output_path, "consolidated.pth"),
+        path_in_repo="consolidated.pth",
         repo_id=repo_name,
-        commit_message="Upload merged model in both safetensors and consolidated formats"
+        commit_message="Upload merged model (transformer backbone only, fp16)"
+    )
+    
+    # Create params.json and consolidate_params.json for Chameleon compatibility
+    params = {
+        "dim": 4096,
+        "n_layers": 32,
+        "n_heads": 32,
+        "n_kv_heads": 32,
+        "vocab_size": 65536,
+        "multiple_of": 256,
+        "ffn_dim_multiplier": 1.0,
+        "norm_eps": 1e-5,
+        "model": {
+            "rope_theta": 10000.0,
+            "qk_normalization": True,
+            "swin_norm": False
+        }
+    }
+    
+    consolidate_params = {
+        "checkpoint_format": "consolidated.pth",
+    }
+    
+    # Save parameter files
+    with open(os.path.join(output_path, "params.json"), "w") as f:
+        json.dump(params, f, indent=2)
+    
+    with open(os.path.join(output_path, "consolidate_params.json"), "w") as f:
+        json.dump(consolidate_params, f, indent=2)
+    
+    # Upload parameter files
+    api.upload_file(
+        path_or_fileobj=os.path.join(output_path, "params.json"),
+        path_in_repo="params.json",
+        repo_id=repo_name,
+        commit_message="Upload model parameters"
+    )
+    
+    api.upload_file(
+        path_or_fileobj=os.path.join(output_path, "consolidate_params.json"),
+        path_in_repo="consolidate_params.json",
+        repo_id=repo_name,
+        commit_message="Upload consolidation parameters"
     )
     
     print(f"Model successfully uploaded to https://huggingface.co/{repo_name}")
@@ -249,4 +435,4 @@ if __name__ == "__main__":
         args.token,
         args.readme_path,
         not args.no_verify
-    ) 
+    )

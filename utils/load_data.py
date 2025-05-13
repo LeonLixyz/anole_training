@@ -32,6 +32,8 @@ def load_data(dataset, data_dir, custom_dataset_path=None):
             dataset_path=custom_dataset_path,
             trust_remote_code=True
         )
+        print(f"data dir: {data_dir}")
+        print(f"custom_dataset_path: {custom_dataset_path}")
         print(f"Geometry Reasoning: {len(data['train'])}")
         data_list.append(data)
     if 'frozenlake' in dataset:
@@ -173,10 +175,10 @@ def tokenize_dataset(train_split, eval_split, test_split, model, processor, **kw
         print(f"Input text - Min: {min(input_lengths)}, Max: {max(input_lengths)}, Avg: {sum(input_lengths)/len(input_lengths):.2f}")
         print(f"Label text - Min: {min(label_lengths)}, Max: {max(label_lengths)}, Avg: {sum(label_lengths)/len(label_lengths):.2f}")
 
-    max_source_length = max(input_lengths)
+    max_source_length = 4096
     print(f"Max source length: {max_source_length}")
 
-    max_target_length = int(sum(label_lengths) / len(label_lengths))
+    max_target_length = 8192
     print(f"Max target length: {max_target_length}")
 
     if not kwargs["interleave"]:

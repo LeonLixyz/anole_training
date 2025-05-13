@@ -13,7 +13,7 @@ def load_model(args):
     model_name = args.model
 
     model_ckpt_path = args.model_ckpt
-
+    print(f"model_ckpt_path: {model_ckpt_path}")
     if model_name in ['anole']:
         image_token_num = args.image_seq_length
 
@@ -58,7 +58,8 @@ def load_model(args):
         lora_model = get_peft_model(model, config)
 
         if args.do_eval and not args.do_train and model_ckpt_path:
-            lora_model.load_adapter(model_ckpt_path, 'default', is_trainable=False)
+            print(f"Loading model from {model_ckpt_path}")
+            lora_model.load_adapter(model_ckpt_path, 'default', is_trainable=False, local_files_only=True)
 
         return {
             'processor': processor,

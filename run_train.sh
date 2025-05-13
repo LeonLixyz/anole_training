@@ -9,11 +9,11 @@ GPU_NUM_PER_NODE=8
 RANK=0
 MASTER_ADDR="localhost"
 MASTER_PORT=29500
-OUTPUT_PATH="outputs/geometry_reasoning_run"
-NOTE="geometry_reasoning_run"
+OUTPUT_PATH="outputs/anole_train"
+NOTE="anole_train"
 DATASET="geometry_reasoning" 
-DATA_DIR="formatted_data"  # Point to our formatted data directory
-FORMATTED_DATA_PATH="formatted_data/all_datasets.json"  # Path to our formatted JSON
+DATA_DIR="/workspace/anole_training/formatted_data"  # Point to our formatted data directory
+FORMATTED_DATA_PATH="/workspace/anole_training/formatted_data/all_datasets.json"  # Path to our formatted JSON
 
 # Create data directory if it doesn't exist
 mkdir -p $DATA_DIR
