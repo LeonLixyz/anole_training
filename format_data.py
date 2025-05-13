@@ -6,7 +6,7 @@ import argparse
 import re
 from io import BytesIO
 from PIL import Image
-from datasets import load_dataset
+from datasets import load_dataset, concatenate_datasets
 
 def base64_to_image(base64_str):
     """Convert base64 string to PIL Image."""
@@ -168,12 +168,13 @@ def format_dataset(dataset, output_dir="formatted_data"):
 def main():
     parser = argparse.ArgumentParser(description="Format dataset for training")
     parser.add_argument("--dataset_names", type=str, nargs="+", 
-                        default=["vlm-reasoning-cot/ARC-AGI", 
-                                 "vlm-reasoning-cot/visual_jigsaw",
+                        default=[
+                                # "vlm-reasoning-cot/ARC-AGI", 
+                                #  "vlm-reasoning-cot/visual_jigsaw",
                                  "vlm-reasoning-cot/graph",
-                                 "vlm-reasoning-cot/Mazes",
+                                #  "vlm-reasoning-cot/Mazes",
                                  "vlm-reasoning-cot/Physics",
-                                 "vlm-reasoning-cot/Tetris",
+                                #  "vlm-reasoning-cot/Tetris",
                                  "vlm-reasoning-cot/MATH_geometry"],
                         help="List of HuggingFace dataset names or paths to process sequentially")
     parser.add_argument("--output_dir", type=str, default="formatted_data",
@@ -200,7 +201,35 @@ def main():
         
         try:
             print(f"Loading dataset {dataset_name}...")
-            dataset = load_dataset(dataset_name, trust_remote_code=True)
+            
+            # Try to load the dataset with default configuration
+            try:
+                dataset = load_dataset(dataset_name, trust_remote_code=True)
+                print("Dataset loaded with default configuration")
+            except Exception as config_error:
+                # Check if the error is about missing config
+                if "Config name is missing" in str(config_error):
+                    # Extract available configs from the error message
+                    configs_match = re.search(r"Please pick one among the available configs: \[(.*?)\]", str(config_error))
+                    if configs_match:
+                        configs_str = configs_match.group(1)
+                        configs = [c.strip("'\"") for c in configs_str.split(", ")]
+                        print(f"Dataset has multiple configurations: {configs}")
+                        
+                        # Load and combine all chunks
+                        chunks = []
+                        for config in configs:
+                            print(f"Loading configuration: {config}")
+                            chunk_dataset = load_dataset(dataset_name, config, trust_remote_code=True)
+                            chunks.append(chunk_dataset['train'])
+                        
+                        # Combine all chunks into one dataset
+                        combined_train = concatenate_datasets(chunks)
+                        dataset = {'train': combined_train}
+                    else:
+                        raise config_error
+                else:
+                    raise config_error
             
             print("Dataset loaded with the following splits:", dataset.keys())
             print(f"Train split size: {len(dataset['train'])}")
