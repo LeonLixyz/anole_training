@@ -251,8 +251,8 @@ if __name__ == '__main__':
     # Handle case where dataset only has a train split
     if len(data.keys()) == 1 and 'train' in data.keys():
         print("Only train split found - creating validation and test splits")
-        # Create train/val/test split (80%, 10%, 10%)
-        train_val_test = data['train'].train_test_split(test_size=0.2, seed=args.seed)
+        # Create train/val/test split (99%, 10%, 10%)
+        train_val_test = data['train'].train_test_split(test_size=0.01, seed=args.seed)
         val_test = train_val_test['test'].train_test_split(test_size=0.5, seed=args.seed)
         
         train_split = train_val_test['train']
