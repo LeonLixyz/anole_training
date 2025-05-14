@@ -67,21 +67,33 @@ def convert_hf_to_chameleon(state_dict):
                 chameleon_key = f'layers.{layer_idx}.attention.wo.weight'
                 chameleon_dict[chameleon_key] = value
             
-            # Normalization layers
+            # Normalization layers - WITH SHAPE FIXING
             elif 'self_attn.q_norm.weight' in key:
                 chameleon_key = f'layers.{layer_idx}.attention.q_normalization.weight'
+                if value.dim() == 2 and value.shape == (32, 128):
+                    print(f"Reshaping {key} from {value.shape} to [128]")
+                    value = value.mean(dim=0)  # Average across the 32 heads dimension
                 chameleon_dict[chameleon_key] = value
             
             elif 'self_attn.q_norm.bias' in key:
                 chameleon_key = f'layers.{layer_idx}.attention.q_normalization.bias'
+                if value.dim() == 2 and value.shape == (32, 128):
+                    print(f"Reshaping {key} from {value.shape} to [128]")
+                    value = value.mean(dim=0)  # Average across the 32 heads dimension
                 chameleon_dict[chameleon_key] = value
             
             elif 'self_attn.k_norm.weight' in key:
                 chameleon_key = f'layers.{layer_idx}.attention.k_normalization.weight'
+                if value.dim() == 2 and value.shape == (32, 128):
+                    print(f"Reshaping {key} from {value.shape} to [128]")
+                    value = value.mean(dim=0)  # Average across the 32 heads dimension
                 chameleon_dict[chameleon_key] = value
             
             elif 'self_attn.k_norm.bias' in key:
                 chameleon_key = f'layers.{layer_idx}.attention.k_normalization.bias'
+                if value.dim() == 2 and value.shape == (32, 128):
+                    print(f"Reshaping {key} from {value.shape} to [128]")
+                    value = value.mean(dim=0)  # Average across the 32 heads dimension
                 chameleon_dict[chameleon_key] = value
             
             # Feed forward components
@@ -407,12 +419,11 @@ def merge_and_upload(
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Merge LoRA adapter weights with base model and upload to Hugging Face")
     parser.add_argument("--adapter_path", type=str, 
-                        default="outputs/geometry_reasoning_run/geometry_reasoning_runimage_seq_len-1024-train-anole-hyper-train1val1lr3e-05-geometry_reasoning-prompt_anole-42",
+                        default="/workspace/anole_training/outputs/anole_train/anole_trainimage_seq_len-1024-train-anole-hyper-train1val1lr3e-05-geometry_reasoning-prompt_anole-42/checkpoint-250",
                         help="Path to the adapter model")
     parser.add_argument("--output_path", type=str, default="merged_model",
                         help="Path where to save the merged model")
-    parser.add_argument("--repo_name", type=str, required=True,
-                        help="Repository name in format 'username/model-name'")
+    parser.add_argument("--repo_name", type=str, default="vlm-reasoning-cot/anole_train", help="Repository name in format 'vlm-reasoning-cot/anole_train'")
     parser.add_argument("--cached_model_path", type=str, 
                         default="/root/.cache/huggingface/hub/models--leloy--Anole-7b-v0.1-hf/snapshots/96df52301e844d8a624a13953051ead4c008343b",
                         help="Path to the cached model")

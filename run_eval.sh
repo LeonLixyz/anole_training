@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Clear Hugging Face datasets cache for geometry_reasoning
+rm -rf ~/.cache/huggingface/datasets/geometry_reasoning*
+
 # Script for running inference with the anole model
 # Usage: ./run_eval.sh
 
@@ -14,7 +17,10 @@ NOTE="vlm_reasoning_eval"
 DATASET="geometry_reasoning" 
 DATA_DIR="/workspace/anole_training/formatted_data"
 FORMATTED_DATA_PATH="/workspace/anole_training/formatted_data/selected_data_with_image_gen.json"
-MODEL_CHECKPOINT="/workspace/anole_training/outputs/geometry_reasoning_run/geometry_reasoning_runimage_seq_len-1024-train-anole-hyper-train1val1lr3e-05-geometry_reasoning-prompt_anole-42"  # Path to your trained model checkpoint
+MODEL_CHECKPOINT="/workspace/anole_training/outputs/anole_train/anole_trainimage_seq_len-1024-train-anole-hyper-train1val1lr3e-05-geometry_reasoning-prompt_anole-42/checkpoint-250"
+# # Path to your trained model checkpoint
+# MODEL_CHECKPOINT="x"
+# Path to your trained model checkpoint
 
 # Create output directory if it doesn't exist
 mkdir -p $OUTPUT_PATH

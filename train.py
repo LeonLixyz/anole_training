@@ -62,8 +62,8 @@ def save_dataset_to_json(data, output_file):
                     example_dict[key] = example[key]
             
             examples.append(example_dict)
-            if (i+1) % 10 == 0:
-                print(f"  Processed {i+1}/{len(data[split])} examples")
+            # if (i+1) % 10 == 0:
+                # print(f"  Processed {i+1}/{len(data[split])} examples")
         
         output[split] = examples
     
@@ -228,22 +228,22 @@ if __name__ == '__main__':
 
     training_args = init(args)
 
-    print(f'Preparing the {args.data} dataset... ')
+    # print(f'Preparing the {args.data} dataset... ')
     data = load_data(dataset=args.data, data_dir=args.data_dir, custom_dataset_path=args.custom_dataset_path)
-    # Print the dataset structure
-    print("\nDataset Structure:")
-    for split in data.keys():
-        print(f"\nSplit: {split}")
-        print(f"  Number of examples: {len(data[split])}")
-        print(f"  Example: {data[split][0]}")
+    # # Print the dataset structure
+    # print("\nDataset Structure:")
+    # for split in data.keys():
+    #     print(f"\nSplit: {split}")
+    #     print(f"  Number of examples: {len(data[split])}")
+    #     print(f"  Example: {data[split][0]}")
     
 
-    # Save the dataset if requested
-    if args.save_dataset and args.local_rank == 0:  # Only save on rank 0 to avoid duplicate writes
-        save_dataset_path = args.save_dataset_path
-        if not os.path.dirname(save_dataset_path):
-            save_dataset_path = f"saved_datasets/{'-'.join(args.data)}_dataset.json"
-        save_dataset_to_json(data, save_dataset_path)
+    # # Save the dataset if requested
+    # if args.save_dataset and args.local_rank == 0:  # Only save on rank 0 to avoid duplicate writes
+    #     save_dataset_path = args.save_dataset_path
+    #     if not os.path.dirname(save_dataset_path):
+    #         save_dataset_path = f"saved_datasets/{'-'.join(args.data)}_dataset.json"
+    #     save_dataset_to_json(data, save_dataset_path)
 
     # Print available splits for debugging
     print(f"Available splits in dataset: {list(data.keys())}")
@@ -351,6 +351,7 @@ if __name__ == '__main__':
     if training_args.load_weights_from is not None:
         checkpoint = training_args.load_weights_from
 
+    print(f"tokenized_data: {tokenized_data}")
     # NOTE: train the model with supervision
     if args.do_train:
         train_result = trainer.train(resume_from_checkpoint=checkpoint)

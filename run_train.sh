@@ -2,6 +2,8 @@
 
 # Script for distributed training of the anole model
 # Usage: ./run_train.sh
+rm -rf ~/.cache/huggingface/datasets/geometry_reasoning*
+rm -rf outputs/anole_train
 
 # Configuration values
 NODE_NUM=1

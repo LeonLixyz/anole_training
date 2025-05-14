@@ -30,7 +30,8 @@ def load_data(dataset, data_dir, custom_dataset_path=None):
             modes=['interleaved_reasoning'], 
             data_dir=data_dir,
             dataset_path=custom_dataset_path,
-            trust_remote_code=True
+            trust_remote_code=True,
+            download_mode="force_redownload"
         )
         print(f"data dir: {data_dir}")
         print(f"custom_dataset_path: {custom_dataset_path}")
@@ -175,10 +176,10 @@ def tokenize_dataset(train_split, eval_split, test_split, model, processor, **kw
         print(f"Input text - Min: {min(input_lengths)}, Max: {max(input_lengths)}, Avg: {sum(input_lengths)/len(input_lengths):.2f}")
         print(f"Label text - Min: {min(label_lengths)}, Max: {max(label_lengths)}, Avg: {sum(label_lengths)/len(label_lengths):.2f}")
 
-    max_source_length = 4096
+    max_source_length = 2048
     print(f"Max source length: {max_source_length}")
 
-    max_target_length = 8192
+    max_target_length = 8192 - 2048
     print(f"Max target length: {max_target_length}")
 
     if not kwargs["interleave"]:

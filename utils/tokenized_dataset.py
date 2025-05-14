@@ -66,7 +66,7 @@ class AnoleTokenizedDataset(Dataset):
             tokenized_input = self.processor(
                 [input_str],
                 images=[input_img],
-                padding="max_length",
+                padding="longest",
                 return_tensors="pt",
                 max_length=self.input_max_length
             )
@@ -74,7 +74,7 @@ class AnoleTokenizedDataset(Dataset):
             tokenized_label = self.label_processor(
                 [label_str],          # for padding
                 images=[label_img],
-                padding="max_length",
+                padding="longest",
                 return_tensors="pt",
                 max_length=self.label_max_length,
             )
@@ -101,7 +101,7 @@ class AnoleTokenizedDataset(Dataset):
             tokenized_input = self.processor(
                 text=input_str,
                 images=input_img,
-                padding="max_length",
+                padding="longest",
                 return_tensors="pt",
                 max_length=self.input_max_length
             )

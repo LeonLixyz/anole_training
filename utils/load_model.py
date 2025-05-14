@@ -25,6 +25,7 @@ def load_model(args):
             attn_implementation="flash_attention_2",
             codebook_sim="mse"
         )
+
         processor = AutoProcessor.from_pretrained("leloy/Anole-7b-v0.1-hf", image_seq_length=image_token_num)
         processor.image_processor.size = {"shortest_edge": int(512 / int(math.sqrt(1024 / image_token_num)))}
         processor.image_processor.crop_size = {
@@ -48,16 +49,21 @@ def load_model(args):
         from peft.peft_model import PeftModel
 
         config = LoraConfig(
-            r=8,
-            lora_alpha=16,
-            target_modules=['q_proj', "k_proj", "v_proj", "o_proj"],
-            lora_dropout=0.1,
+            r=128,
+            lora_alpha=256,
+            target_modules=['q_proj', "k_proj", "v_proj", "o_proj", "gate_proj", "down_proj", "up_proj"],
+            lora_dropout=0.05,
             bias="none",
             modules_to_save=["lm_head"],
         )
         lora_model = get_peft_model(model, config)
+        #print required_grad
 
-        if args.do_eval and not args.do_train and model_ckpt_path:
+        # for name, param in model.named_parameters():
+        #     if param.requires_grad:
+        #         print(f"{name} requires_grad: {param.requires_grad}")
+
+        if args.do_eval and not args.do_train and model_ckpt_path != "x":
             print(f"Loading model from {model_ckpt_path}")
             lora_model.load_adapter(model_ckpt_path, 'default', is_trainable=False, local_files_only=True)
 

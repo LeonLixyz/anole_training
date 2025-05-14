@@ -114,6 +114,7 @@ class CustomizeSeq2SeqTrainer(Seq2SeqTrainer):
         self.wandb_run_dir = wandb_run_dir
 
         self.image_loss_func = image_loss_func
+        self._globalstep_last_logged = -1
     
     def evaluate(
             self,
@@ -179,6 +180,10 @@ class CustomizeSeq2SeqTrainer(Seq2SeqTrainer):
             )
         finally:
             self.compute_metrics = compute_metrics
+
+        # Ensure metrics dict exists to avoid attribute errors (EvalLoopOutput is immutable NamedTuple)
+        if output.metrics is None:
+            output = output._replace(metrics={})
 
         if eval_examples is not None and eval_dataset is not None and self.compute_metrics is not None:
             eval_preds = self._post_process_function(
@@ -261,6 +266,9 @@ class CustomizeSeq2SeqTrainer(Seq2SeqTrainer):
         finally:
             self.compute_metrics = compute_metrics
 
+        # Ensure metrics dict exists before any update operations
+        if output.metrics is None:
+            output = output._replace(metrics={})
 
         if self.compute_metrics is not None:
             eval_preds = self._post_process_function(
@@ -359,14 +367,12 @@ class CustomizeSeq2SeqTrainer(Seq2SeqTrainer):
                         for i in range(len(sketches_per_item)):
                             file_path = os.path.join(sketch_dir, rf"{str(examples[idx]['idx'])}_{i}_{stage}.png")
                             img = Image.fromarray(np.transpose((sketches_per_item[i, :, :, :]).cpu().detach().to(torch.uint8).numpy(), (1, 2, 0)).astype(np.uint8))
-                            if len(examples[idx]["label_imgs"]) != 0:
-                                concat_img = get_concat_h(im1=examples[idx]["label_imgs"][-1], im2=img)
-                                concat_img = get_concat_h(im1=examples[idx]['input_imgs'][-1], im2=concat_img)
-                            else:
-                                concat_img = img
+                            concat_img = img
                             concat_img.save(file_path)
+                            print(f"saved sketch to {file_path}")
 
                             sketch_files_per_item.append(file_path)
+                            print(f"saved sketch to {file_path}")
 
                     sketch_files.append(sketch_files_per_item)
 
@@ -585,6 +591,22 @@ class CustomizeSeq2SeqTrainer(Seq2SeqTrainer):
             labels = None
 
         if generated_sketch is not None:
+            print(f"generated_sketch: {generated_sketch}")
+
+            with torch.no_grad():
+                # decode visual tokens → pixels
+                imgs = self.model.decode_image_tokens(generated_sketch["sketch"])
+                imgs = self.tokenizer.postprocess_pixel_values(imgs)
+
+            save_dir = os.path.join(self.args.output_dir, "sketch_stream")
+            os.makedirs(save_dir, exist_ok=True)
+
+            # imgs shape:  (B, n_img, 3, H, W)
+            for b in range(imgs.size(0)):
+                for i in range(imgs.size(1)):
+                    img = imgs[b, i].to(torch.uint8).cpu().permute(1, 2, 0).numpy()
+                    fname = f"{self.state.global_step:07d}_{b}_{i}.png"
+                    Image.fromarray(img).save(os.path.join(save_dir, fname))
             return loss, (generated_tokens, generated_sketch), labels
         else:
             return loss, generated_tokens, labels

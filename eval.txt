@@ -1,0 +1,2388 @@
+Preparing the ['geometry_reasoning'] dataset... 
+args.data_dir: /workspace/anole_training/formatted_data
+args.custom_dataset_path: /workspace/anole_training/formatted_data/selected_data_with_image_gen.json
+check--------------------------------
+data dir: /workspace/anole_training/formatted_data
+custom_dataset_path: /workspace/anole_training/formatted_data/selected_data_with_image_gen.json
+Geometry Reasoning: 6
+Available splits in dataset: ['train', 'validation', 'test']
+data: {'train': Dataset({
+    features: ['input_text', 'input_img_paths', 'label_text', 'label_img_paths', 'task', 'train_task', 'idx'],
+    num_rows: 6
+}), 'validation': Dataset({
+    features: ['input_text', 'input_img_paths', 'label_text', 'label_img_paths', 'task', 'train_task', 'idx'],
+    num_rows: 1
+}), 'test': Dataset({
+    features: ['input_text', 'input_img_paths', 'label_text', 'label_img_paths', 'task', 'train_task', 'idx'],
+    num_rows: 1
+})}
+Adding train split with 6 examples
+Adding validation split with 1 examples
+Adding test split with 1 examples
+Created merged evaluation dataset with 8 examples
+model_ckpt_path: /workspace/anole_training/outputs/anole_train/anole_trainimage_seq_len-1024-train-anole-hyper-train1val1lr3e-05-geometry_reasoning-prompt_anole-42/checkpoint-250
+Preparing the ['geometry_reasoning'] dataset... 
+args.data_dir: /workspace/anole_training/formatted_data
+args.custom_dataset_path: /workspace/anole_training/formatted_data/selected_data_with_image_gen.json
+check--------------------------------
+data dir: /workspace/anole_training/formatted_data
+custom_dataset_path: /workspace/anole_training/formatted_data/selected_data_with_image_gen.json
+Geometry Reasoning: 6
+Available splits in dataset: ['train', 'validation', 'test']
+data: {'train': Dataset({
+    features: ['input_text', 'input_img_paths', 'label_text', 'label_img_paths', 'task', 'train_task', 'idx'],
+    num_rows: 6
+}), 'validation': Dataset({
+    features: ['input_text', 'input_img_paths', 'label_text', 'label_img_paths', 'task', 'train_task', 'idx'],
+    num_rows: 1
+}), 'test': Dataset({
+    features: ['input_text', 'input_img_paths', 'label_text', 'label_img_paths', 'task', 'train_task', 'idx'],
+    num_rows: 1
+})}
+Adding train split with 6 examples
+Adding validation split with 1 examples
+Adding test split with 1 examples
+Created merged evaluation dataset with 8 examples
+model_ckpt_path: /workspace/anole_training/outputs/anole_train/anole_trainimage_seq_len-1024-train-anole-hyper-train1val1lr3e-05-geometry_reasoning-prompt_anole-42/checkpoint-250
+Preparing the ['geometry_reasoning'] dataset... 
+args.data_dir: /workspace/anole_training/formatted_data
+args.custom_dataset_path: /workspace/anole_training/formatted_data/selected_data_with_image_gen.json
+check--------------------------------
+Preparing the ['geometry_reasoning'] dataset... 
+args.data_dir: /workspace/anole_training/formatted_data
+args.custom_dataset_path: /workspace/anole_training/formatted_data/selected_data_with_image_gen.json
+check--------------------------------
+Preparing the ['geometry_reasoning'] dataset... 
+args.data_dir: /workspace/anole_training/formatted_data
+args.custom_dataset_path: /workspace/anole_training/formatted_data/selected_data_with_image_gen.json
+check--------------------------------
+Preparing the ['geometry_reasoning'] dataset... 
+args.data_dir: /workspace/anole_training/formatted_data
+args.custom_dataset_path: /workspace/anole_training/formatted_data/selected_data_with_image_gen.json
+check--------------------------------
+data dir: /workspace/anole_training/formatted_data
+custom_dataset_path: /workspace/anole_training/formatted_data/selected_data_with_image_gen.json
+Geometry Reasoning: 6
+Preparing the ['geometry_reasoning'] dataset... 
+args.data_dir: /workspace/anole_training/formatted_data
+args.custom_dataset_path: /workspace/anole_training/formatted_data/selected_data_with_image_gen.json
+check--------------------------------
+Available splits in dataset: ['train', 'validation', 'test']
+data: {'train': Dataset({
+    features: ['input_text', 'input_img_paths', 'label_text', 'label_img_paths', 'task', 'train_task', 'idx'],
+    num_rows: 6
+}), 'validation': Dataset({
+    features: ['input_text', 'input_img_paths', 'label_text', 'label_img_paths', 'task', 'train_task', 'idx'],
+    num_rows: 1
+}), 'test': Dataset({
+    features: ['input_text', 'input_img_paths', 'label_text', 'label_img_paths', 'task', 'train_task', 'idx'],
+    num_rows: 1
+})}
+Adding train split with 6 examples
+Adding validation split with 1 examples
+Adding test split with 1 examples
+Created merged evaluation dataset with 8 examples
+model_ckpt_path: /workspace/anole_training/outputs/anole_train/anole_trainimage_seq_len-1024-train-anole-hyper-train1val1lr3e-05-geometry_reasoning-prompt_anole-42/checkpoint-250
+data dir: /workspace/anole_training/formatted_data
+custom_dataset_path: /workspace/anole_training/formatted_data/selected_data_with_image_gen.json
+Geometry Reasoning: 6
+Available splits in dataset: ['train', 'validation', 'test']
+data: {'train': Dataset({
+    features: ['input_text', 'input_img_paths', 'label_text', 'label_img_paths', 'task', 'train_task', 'idx'],
+    num_rows: 6
+}), 'validation': Dataset({
+    features: ['input_text', 'input_img_paths', 'label_text', 'label_img_paths', 'task', 'train_task', 'idx'],
+    num_rows: 1
+}), 'test': Dataset({
+    features: ['input_text', 'input_img_paths', 'label_text', 'label_img_paths', 'task', 'train_task', 'idx'],
+    num_rows: 1
+})}
+Adding train split with 6 examples
+Adding validation split with 1 examples
+Adding test split with 1 examples
+data dir: /workspace/anole_training/formatted_data
+custom_dataset_path: /workspace/anole_training/formatted_data/selected_data_with_image_gen.json
+Geometry Reasoning: 6
+Created merged evaluation dataset with 8 examples
+model_ckpt_path: /workspace/anole_training/outputs/anole_train/anole_trainimage_seq_len-1024-train-anole-hyper-train1val1lr3e-05-geometry_reasoning-prompt_anole-42/checkpoint-250
+Available splits in dataset: ['train', 'validation', 'test']
+data: {'train': Dataset({
+    features: ['input_text', 'input_img_paths', 'label_text', 'label_img_paths', 'task', 'train_task', 'idx'],
+    num_rows: 6
+}), 'validation': Dataset({
+    features: ['input_text', 'input_img_paths', 'label_text', 'label_img_paths', 'task', 'train_task', 'idx'],
+    num_rows: 1
+}), 'test': Dataset({
+    features: ['input_text', 'input_img_paths', 'label_text', 'label_img_paths', 'task', 'train_task', 'idx'],
+    num_rows: 1
+})}
+Adding train split with 6 examples
+Adding validation split with 1 examples
+Adding test split with 1 examples
+Created merged evaluation dataset with 8 examples
+model_ckpt_path: /workspace/anole_training/outputs/anole_train/anole_trainimage_seq_len-1024-train-anole-hyper-train1val1lr3e-05-geometry_reasoning-prompt_anole-42/checkpoint-250
+data dir: /workspace/anole_training/formatted_data
+custom_dataset_path: /workspace/anole_training/formatted_data/selected_data_with_image_gen.json
+Geometry Reasoning: 6
+Available splits in dataset: ['train', 'validation', 'test']
+data: {'train': Dataset({
+    features: ['input_text', 'input_img_paths', 'label_text', 'label_img_paths', 'task', 'train_task', 'idx'],
+    num_rows: 6
+}), 'validation': Dataset({
+    features: ['input_text', 'input_img_paths', 'label_text', 'label_img_paths', 'task', 'train_task', 'idx'],
+    num_rows: 1
+}), 'test': Dataset({
+    features: ['input_text', 'input_img_paths', 'label_text', 'label_img_paths', 'task', 'train_task', 'idx'],
+    num_rows: 1
+})}
+Adding train split with 6 examples
+Adding validation split with 1 examples
+Adding test split with 1 examples
+Created merged evaluation dataset with 8 examples
+model_ckpt_path: /workspace/anole_training/outputs/anole_train/anole_trainimage_seq_len-1024-train-anole-hyper-train1val1lr3e-05-geometry_reasoning-prompt_anole-42/checkpoint-250
+data dir: /workspace/anole_training/formatted_data
+custom_dataset_path: /workspace/anole_training/formatted_data/selected_data_with_image_gen.json
+Geometry Reasoning: 6
+Available splits in dataset: ['train', 'validation', 'test']
+data: {'train': Dataset({
+    features: ['input_text', 'input_img_paths', 'label_text', 'label_img_paths', 'task', 'train_task', 'idx'],
+    num_rows: 6
+}), 'validation': Dataset({
+    features: ['input_text', 'input_img_paths', 'label_text', 'label_img_paths', 'task', 'train_task', 'idx'],
+    num_rows: 1
+}), 'test': Dataset({
+    features: ['input_text', 'input_img_paths', 'label_text', 'label_img_paths', 'task', 'train_task', 'idx'],
+    num_rows: 1
+})}
+Adding train split with 6 examples
+Adding validation split with 1 examples
+Adding test split with 1 examples
+Created merged evaluation dataset with 8 examples
+model_ckpt_path: /workspace/anole_training/outputs/anole_train/anole_trainimage_seq_len-1024-train-anole-hyper-train1val1lr3e-05-geometry_reasoning-prompt_anole-42/checkpoint-250
+Preparing the ['geometry_reasoning'] dataset... 
+args.data_dir: /workspace/anole_training/formatted_data
+args.custom_dataset_path: /workspace/anole_training/formatted_data/selected_data_with_image_gen.json
+check--------------------------------
+data dir: /workspace/anole_training/formatted_data
+custom_dataset_path: /workspace/anole_training/formatted_data/selected_data_with_image_gen.json
+Geometry Reasoning: 6
+Available splits in dataset: ['train', 'validation', 'test']
+data: {'train': Dataset({
+    features: ['input_text', 'input_img_paths', 'label_text', 'label_img_paths', 'task', 'train_task', 'idx'],
+    num_rows: 6
+}), 'validation': Dataset({
+    features: ['input_text', 'input_img_paths', 'label_text', 'label_img_paths', 'task', 'train_task', 'idx'],
+    num_rows: 1
+}), 'test': Dataset({
+    features: ['input_text', 'input_img_paths', 'label_text', 'label_img_paths', 'task', 'train_task', 'idx'],
+    num_rows: 1
+})}
+Adding train split with 6 examples
+Adding validation split with 1 examples
+Adding test split with 1 examples
+Created merged evaluation dataset with 8 examples
+model_ckpt_path: /workspace/anole_training/outputs/anole_train/anole_trainimage_seq_len-1024-train-anole-hyper-train1val1lr3e-05-geometry_reasoning-prompt_anole-42/checkpoint-250
+model.layers.0.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.0.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.0.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.0.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.0.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.0.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.0.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.0.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.1.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.1.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.1.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.1.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.1.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.1.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.1.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.1.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.2.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.2.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.2.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.2.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.2.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.2.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.2.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.2.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.3.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.3.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.3.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.3.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.3.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.3.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.3.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.3.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.4.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.4.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.4.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.4.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.4.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.4.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.4.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.4.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.5.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.5.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.5.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.5.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.5.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.5.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.5.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.5.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.6.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.6.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.6.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.6.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.6.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.6.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.6.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.6.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.7.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.7.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.7.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.7.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.7.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.7.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.7.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.7.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.8.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.8.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.8.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.8.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.8.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.8.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.8.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.8.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.9.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.9.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.9.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.9.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.9.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.9.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.9.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.9.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.10.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.10.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.10.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.10.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.10.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.10.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.10.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.10.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.11.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.11.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.11.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.11.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.11.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.11.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.11.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.11.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.12.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.12.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.12.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.12.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.12.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.12.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.12.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.12.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.13.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.13.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.13.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.13.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.13.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.13.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.13.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.13.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.14.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.14.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.14.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.14.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.14.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.14.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.14.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.14.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.15.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.15.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.15.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.15.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.15.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.15.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.15.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.15.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.16.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.16.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.16.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.16.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.16.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.16.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.16.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.16.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.17.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.17.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.17.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.17.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.17.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.17.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.17.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.17.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.18.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.18.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.18.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.18.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.18.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.18.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.18.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.18.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.19.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.19.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.19.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.19.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.19.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.19.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.19.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.19.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.20.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.20.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.20.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.20.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.20.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.20.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.20.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.20.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.21.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.21.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.21.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.21.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.21.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.21.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.21.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.21.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.22.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.22.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.22.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.22.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.22.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.22.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.22.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.22.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.23.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.23.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.23.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.23.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.23.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.23.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.23.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.23.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.24.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.24.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.24.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.24.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.24.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.24.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.24.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.24.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.25.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.25.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.25.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.25.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.25.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.25.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.25.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.25.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.26.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.26.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.26.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.26.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.26.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.26.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.26.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.26.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.27.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.27.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.27.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.27.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.27.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.27.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.27.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.27.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.28.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.28.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.28.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.28.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.28.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.28.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.28.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.28.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.29.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.29.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.29.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.29.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.29.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.29.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.29.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.29.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.30.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.30.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.30.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.30.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.30.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.30.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.30.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.30.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.31.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.31.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.31.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.31.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.31.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.31.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.31.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.31.self_attn.o_proj.lora_B.default.weight requires_grad: True
+lm_head.modules_to_save.default.weight requires_grad: True
+Loading model from /workspace/anole_training/outputs/anole_train/anole_trainimage_seq_len-1024-train-anole-hyper-train1val1lr3e-05-geometry_reasoning-prompt_anole-42/checkpoint-250
+model.layers.0.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.0.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.0.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.0.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.0.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.0.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.0.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.0.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.1.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.1.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.1.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.1.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.1.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.1.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.1.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.1.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.2.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.2.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.2.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.2.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.2.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.2.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.2.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.2.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.3.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.3.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.3.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.3.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.3.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.3.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.3.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.3.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.4.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.4.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.4.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.4.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.4.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.4.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.4.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.4.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.5.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.5.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.5.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.5.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.5.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.5.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.5.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.5.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.6.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.6.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.6.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.6.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.6.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.6.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.6.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.6.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.7.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.7.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.7.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.7.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.7.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.7.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.7.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.7.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.8.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.8.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.8.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.8.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.8.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.8.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.8.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.8.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.9.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.9.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.9.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.9.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.9.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.9.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.9.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.9.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.10.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.10.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.10.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.10.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.10.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.10.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.10.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.10.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.11.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.11.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.11.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.11.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.11.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.11.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.11.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.11.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.12.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.12.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.12.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.12.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.12.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.12.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.12.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.12.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.13.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.13.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.13.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.13.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.13.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.13.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.13.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.13.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.14.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.14.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.14.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.14.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.14.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.14.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.14.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.14.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.15.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.15.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.15.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.15.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.15.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.15.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.15.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.15.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.16.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.16.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.16.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.16.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.16.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.16.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.16.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.16.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.17.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.17.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.17.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.17.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.17.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.17.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.17.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.17.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.18.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.18.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.18.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.18.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.18.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.18.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.18.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.18.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.19.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.19.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.19.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.19.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.19.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.19.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.19.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.19.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.20.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.20.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.20.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.20.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.20.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.20.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.20.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.20.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.21.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.21.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.21.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.21.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.21.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.21.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.21.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.21.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.22.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.22.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.22.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.22.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.22.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.22.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.22.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.22.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.23.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.23.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.23.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.23.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.23.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.23.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.23.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.23.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.24.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.24.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.24.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.24.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.24.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.24.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.24.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.24.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.25.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.25.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.25.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.25.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.25.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.25.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.25.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.25.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.26.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.26.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.26.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.26.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.26.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.26.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.26.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.26.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.27.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.27.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.27.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.27.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.27.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.27.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.27.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.27.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.28.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.28.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.28.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.28.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.28.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.28.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.28.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.28.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.29.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.29.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.29.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.29.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.29.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.29.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.29.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.29.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.30.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.30.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.30.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.30.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.30.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.30.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.30.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.30.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.31.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.31.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.31.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.31.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.31.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.31.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.31.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.31.self_attn.o_proj.lora_B.default.weight requires_grad: True
+lm_head.modules_to_save.default.weight requires_grad: True
+Loading model from /workspace/anole_training/outputs/anole_train/anole_trainimage_seq_len-1024-train-anole-hyper-train1val1lr3e-05-geometry_reasoning-prompt_anole-42/checkpoint-250
+Eval Num: 8
+Raw text statistics for training data:
+Input text - Min: 102, Max: 266, Avg: 156.62
+Label text - Min: 435, Max: 4886, Avg: 1444.12
+Max source length: 4096
+Max target length: 8192
+input_max_length in interleaved_tokenized_dataset: 4096
+label_max_length in interleaved_tokenized_dataset: 8192
+Eval Num: 8
+Raw text statistics for training data:
+Input text - Min: 102, Max: 266, Avg: 156.62
+Label text - Min: 435, Max: 4886, Avg: 1444.12
+Max source length: 4096
+Max target length: 8192
+input_max_length in interleaved_tokenized_dataset: 4096
+label_max_length in interleaved_tokenized_dataset: 8192
+model.layers.0.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.0.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.0.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.0.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.0.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.0.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.0.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.0.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.1.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.1.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.1.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.1.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.1.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.1.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.1.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.1.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.2.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.2.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.2.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.2.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.2.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.2.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.2.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.2.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.3.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.3.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.3.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.3.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.3.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.3.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.3.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.3.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.4.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.4.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.4.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.4.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.4.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.4.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.4.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.4.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.5.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.5.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.5.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.5.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.5.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.5.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.5.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.5.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.6.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.6.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.6.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.6.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.6.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.6.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.6.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.6.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.7.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.7.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.7.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.7.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.7.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.7.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.7.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.7.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.8.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.8.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.8.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.8.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.8.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.8.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.8.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.8.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.9.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.9.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.9.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.9.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.9.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.9.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.9.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.9.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.10.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.10.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.10.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.10.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.10.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.10.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.10.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.10.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.11.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.11.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.11.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.11.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.11.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.11.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.11.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.11.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.12.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.12.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.12.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.12.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.12.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.12.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.12.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.12.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.13.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.13.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.13.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.13.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.13.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.13.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.13.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.13.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.14.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.14.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.14.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.14.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.14.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.14.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.14.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.14.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.15.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.15.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.15.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.15.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.15.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.15.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.15.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.15.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.16.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.16.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.16.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.16.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.16.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.16.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.16.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.16.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.17.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.17.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.17.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.17.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.17.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.17.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.17.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.17.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.18.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.18.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.18.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.18.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.18.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.18.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.18.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.18.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.19.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.19.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.19.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.19.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.19.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.19.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.19.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.19.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.20.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.20.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.20.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.20.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.20.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.20.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.20.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.20.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.21.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.21.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.21.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.21.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.21.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.21.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.21.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.21.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.22.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.22.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.22.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.22.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.22.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.22.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.22.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.22.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.23.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.23.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.23.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.23.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.23.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.23.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.23.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.23.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.24.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.24.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.24.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.24.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.24.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.24.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.24.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.24.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.25.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.25.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.25.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.25.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.25.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.25.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.25.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.25.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.26.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.26.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.26.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.26.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.26.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.26.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.26.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.26.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.27.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.27.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.27.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.27.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.27.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.27.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.27.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.27.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.28.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.28.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.28.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.28.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.28.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.28.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.28.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.28.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.29.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.29.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.29.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.29.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.29.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.29.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.29.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.29.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.30.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.30.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.30.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.30.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.30.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.30.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.30.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.30.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.31.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.31.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.31.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.31.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.31.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.31.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.31.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.31.self_attn.o_proj.lora_B.default.weight requires_grad: True
+lm_head.modules_to_save.default.weight requires_grad: True
+Loading model from /workspace/anole_training/outputs/anole_train/anole_trainimage_seq_len-1024-train-anole-hyper-train1val1lr3e-05-geometry_reasoning-prompt_anole-42/checkpoint-250
+model.layers.0.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.0.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.0.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.0.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.0.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.0.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.0.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.0.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.1.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.1.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.1.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.1.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.1.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.1.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.1.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.1.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.2.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.2.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.2.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.2.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.2.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.2.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.2.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.2.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.3.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.3.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.3.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.3.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.3.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.3.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.3.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.3.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.4.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.4.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.4.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.4.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.4.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.4.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.4.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.4.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.5.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.5.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.5.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.5.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.5.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.5.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.5.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.5.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.6.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.6.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.6.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.6.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.6.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.6.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.6.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.6.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.7.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.7.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.7.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.7.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.7.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.7.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.7.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.7.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.8.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.8.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.8.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.8.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.8.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.8.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.8.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.8.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.9.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.9.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.9.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.9.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.9.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.9.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.9.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.9.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.10.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.10.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.10.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.10.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.10.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.10.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.10.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.10.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.11.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.11.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.11.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.11.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.11.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.11.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.11.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.11.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.12.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.12.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.12.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.12.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.12.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.12.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.12.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.12.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.13.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.13.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.13.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.13.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.13.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.13.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.13.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.13.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.14.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.14.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.14.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.14.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.14.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.14.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.14.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.14.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.15.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.15.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.15.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.15.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.15.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.15.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.15.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.15.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.16.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.16.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.16.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.16.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.16.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.16.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.16.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.16.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.17.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.17.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.17.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.17.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.17.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.17.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.17.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.17.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.18.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.18.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.18.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.18.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.18.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.18.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.18.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.18.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.19.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.19.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.19.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.19.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.19.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.19.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.19.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.19.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.20.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.20.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.20.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.20.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.20.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.20.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.20.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.20.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.21.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.21.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.21.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.21.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.21.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.21.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.21.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.21.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.22.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.22.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.22.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.22.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.22.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.22.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.22.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.22.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.23.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.23.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.23.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.23.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.23.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.23.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.23.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.23.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.24.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.24.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.24.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.24.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.24.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.24.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.24.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.24.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.25.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.25.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.25.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.25.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.25.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.25.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.25.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.25.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.26.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.26.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.26.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.26.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.26.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.26.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.26.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.26.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.27.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.27.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.27.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.27.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.27.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.27.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.27.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.27.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.28.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.28.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.28.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.28.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.28.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.28.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.28.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.28.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.29.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.29.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.29.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.29.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.29.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.29.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.29.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.29.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.30.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.30.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.30.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.30.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.30.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.30.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.30.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.30.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.31.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.31.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.31.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.31.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.31.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.31.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.31.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.31.self_attn.o_proj.lora_B.default.weight requires_grad: True
+lm_head.modules_to_save.default.weight requires_grad: True
+Loading model from /workspace/anole_training/outputs/anole_train/anole_trainimage_seq_len-1024-train-anole-hyper-train1val1lr3e-05-geometry_reasoning-prompt_anole-42/checkpoint-250
+model.layers.0.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.0.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.0.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.0.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.0.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.0.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.0.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.0.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.1.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.1.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.1.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.1.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.1.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.1.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.1.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.1.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.2.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.2.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.2.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.2.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.2.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.2.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.2.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.2.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.3.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.3.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.3.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.3.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.3.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.3.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.3.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.3.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.4.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.4.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.4.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.4.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.4.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.4.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.4.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.4.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.5.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.5.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.5.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.5.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.5.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.5.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.5.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.5.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.6.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.6.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.6.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.6.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.6.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.6.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.6.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.6.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.7.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.7.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.7.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.7.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.7.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.7.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.7.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.7.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.8.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.8.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.8.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.8.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.8.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.8.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.8.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.8.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.9.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.9.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.9.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.9.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.9.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.9.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.9.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.9.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.10.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.10.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.10.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.10.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.10.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.10.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.10.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.10.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.11.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.11.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.11.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.11.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.11.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.11.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.11.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.11.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.12.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.12.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.12.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.12.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.12.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.12.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.12.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.12.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.13.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.13.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.13.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.13.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.13.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.13.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.13.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.13.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.14.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.14.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.14.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.14.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.14.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.14.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.14.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.14.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.15.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.15.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.15.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.15.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.15.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.15.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.15.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.15.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.16.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.16.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.16.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.16.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.16.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.16.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.16.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.16.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.17.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.17.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.17.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.17.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.17.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.17.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.17.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.17.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.18.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.18.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.18.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.18.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.18.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.18.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.18.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.18.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.19.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.19.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.19.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.19.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.19.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.19.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.19.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.19.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.20.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.20.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.20.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.20.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.20.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.20.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.20.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.20.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.21.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.21.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.21.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.21.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.21.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.21.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.21.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.21.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.22.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.22.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.22.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.22.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.22.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.22.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.22.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.22.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.23.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.23.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.23.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.23.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.23.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.23.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.23.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.23.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.24.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.24.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.24.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.24.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.24.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.24.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.24.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.24.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.25.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.25.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.25.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.25.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.25.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.25.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.25.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.25.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.26.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.26.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.26.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.26.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.26.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.26.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.26.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.26.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.27.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.27.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.27.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.27.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.27.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.27.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.27.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.27.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.28.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.28.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.28.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.28.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.28.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.28.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.28.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.28.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.29.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.29.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.29.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.29.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.29.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.29.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.29.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.29.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.30.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.30.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.30.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.30.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.30.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.30.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.30.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.30.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.31.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.31.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.31.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.31.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.31.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.31.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.31.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.31.self_attn.o_proj.lora_B.default.weight requires_grad: True
+lm_head.modules_to_save.default.weight requires_grad: True
+Loading model from /workspace/anole_training/outputs/anole_train/anole_trainimage_seq_len-1024-train-anole-hyper-train1val1lr3e-05-geometry_reasoning-prompt_anole-42/checkpoint-250
+model.layers.0.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.0.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.0.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.0.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.0.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.0.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.0.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.0.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.1.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.1.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.1.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.1.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.1.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.1.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.1.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.1.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.2.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.2.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.2.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.2.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.2.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.2.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.2.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.2.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.3.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.3.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.3.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.3.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.3.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.3.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.3.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.3.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.4.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.4.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.4.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.4.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.4.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.4.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.4.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.4.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.5.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.5.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.5.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.5.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.5.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.5.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.5.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.5.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.6.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.6.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.6.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.6.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.6.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.6.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.6.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.6.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.7.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.7.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.7.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.7.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.7.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.7.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.7.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.7.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.8.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.8.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.8.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.8.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.8.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.8.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.8.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.8.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.9.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.9.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.9.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.9.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.9.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.9.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.9.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.9.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.10.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.10.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.10.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.10.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.10.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.10.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.10.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.10.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.11.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.11.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.11.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.11.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.11.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.11.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.11.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.11.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.12.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.12.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.12.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.12.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.12.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.12.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.12.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.12.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.13.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.13.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.13.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.13.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.13.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.13.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.13.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.13.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.14.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.14.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.14.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.14.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.14.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.14.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.14.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.14.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.15.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.15.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.15.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.15.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.15.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.15.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.15.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.15.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.16.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.16.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.16.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.16.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.16.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.16.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.16.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.16.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.17.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.17.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.17.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.17.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.17.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.17.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.17.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.17.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.18.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.18.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.18.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.18.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.18.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.18.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.18.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.18.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.19.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.19.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.19.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.19.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.19.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.19.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.19.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.19.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.20.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.20.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.20.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.20.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.20.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.20.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.20.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.20.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.21.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.21.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.21.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.21.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.21.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.21.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.21.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.21.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.22.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.22.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.22.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.22.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.22.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.22.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.22.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.22.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.23.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.23.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.23.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.23.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.23.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.23.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.23.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.23.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.24.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.24.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.24.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.24.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.24.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.24.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.24.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.24.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.25.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.25.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.25.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.25.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.25.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.25.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.25.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.25.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.26.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.26.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.26.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.26.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.26.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.26.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.26.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.26.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.27.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.27.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.27.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.27.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.27.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.27.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.27.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.27.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.28.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.28.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.28.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.28.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.28.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.28.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.28.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.28.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.29.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.29.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.29.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.29.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.29.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.29.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.29.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.29.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.30.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.30.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.30.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.30.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.30.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.30.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.30.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.30.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.31.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.31.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.31.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.31.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.31.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.31.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.31.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.31.self_attn.o_proj.lora_B.default.weight requires_grad: True
+lm_head.modules_to_save.default.weight requires_grad: True
+Loading model from /workspace/anole_training/outputs/anole_train/anole_trainimage_seq_len-1024-train-anole-hyper-train1val1lr3e-05-geometry_reasoning-prompt_anole-42/checkpoint-250
+input_max_length in interleaved_tokenized_dataset: 4096
+label_max_length in interleaved_tokenized_dataset: 8192
+model.layers.0.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.0.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.0.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.0.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.0.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.0.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.0.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.0.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.1.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.1.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.1.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.1.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.1.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.1.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.1.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.1.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.2.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.2.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.2.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.2.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.2.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.2.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.2.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.2.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.3.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.3.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.3.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.3.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.3.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.3.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.3.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.3.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.4.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.4.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.4.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.4.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.4.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.4.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.4.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.4.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.5.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.5.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.5.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.5.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.5.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.5.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.5.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.5.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.6.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.6.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.6.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.6.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.6.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.6.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.6.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.6.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.7.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.7.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.7.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.7.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.7.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.7.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.7.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.7.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.8.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.8.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.8.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.8.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.8.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.8.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.8.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.8.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.9.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.9.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.9.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.9.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.9.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.9.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.9.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.9.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.10.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.10.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.10.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.10.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.10.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.10.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.10.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.10.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.11.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.11.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.11.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.11.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.11.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.11.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.11.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.11.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.12.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.12.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.12.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.12.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.12.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.12.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.12.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.12.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.13.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.13.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.13.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.13.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.13.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.13.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.13.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.13.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.14.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.14.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.14.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.14.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.14.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.14.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.14.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.14.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.15.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.15.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.15.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.15.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.15.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.15.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.15.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.15.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.16.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.16.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.16.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.16.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.16.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.16.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.16.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.16.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.17.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.17.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.17.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.17.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.17.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.17.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.17.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.17.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.18.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.18.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.18.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.18.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.18.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.18.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.18.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.18.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.19.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.19.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.19.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.19.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.19.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.19.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.19.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.19.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.20.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.20.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.20.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.20.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.20.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.20.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.20.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.20.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.21.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.21.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.21.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.21.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.21.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.21.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.21.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.21.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.22.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.22.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.22.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.22.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.22.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.22.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.22.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.22.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.23.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.23.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.23.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.23.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.23.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.23.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.23.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.23.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.24.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.24.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.24.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.24.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.24.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.24.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.24.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.24.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.25.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.25.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.25.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.25.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.25.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.25.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.25.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.25.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.26.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.26.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.26.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.26.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.26.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.26.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.26.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.26.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.27.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.27.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.27.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.27.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.27.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.27.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.27.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.27.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.28.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.28.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.28.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.28.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.28.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.28.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.28.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.28.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.29.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.29.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.29.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.29.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.29.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.29.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.29.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.29.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.30.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.30.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.30.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.30.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.30.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.30.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.30.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.30.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.31.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.31.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.31.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.31.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.31.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.31.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.31.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.31.self_attn.o_proj.lora_B.default.weight requires_grad: True
+lm_head.modules_to_save.default.weight requires_grad: True
+Loading model from /workspace/anole_training/outputs/anole_train/anole_trainimage_seq_len-1024-train-anole-hyper-train1val1lr3e-05-geometry_reasoning-prompt_anole-42/checkpoint-250
+input_max_length in interleaved_tokenized_dataset: 4096
+label_max_length in interleaved_tokenized_dataset: 8192
+Eval Num: 8
+Raw text statistics for training data:
+Input text - Min: 102, Max: 266, Avg: 156.62
+Label text - Min: 435, Max: 4886, Avg: 1444.12
+Max source length: 4096
+Max target length: 8192
+input_max_length in interleaved_tokenized_dataset: 4096
+label_max_length in interleaved_tokenized_dataset: 8192
+Eval Num: 8
+Raw text statistics for training data:
+Input text - Min: 102, Max: 266, Avg: 156.62
+Label text - Min: 435, Max: 4886, Avg: 1444.12
+Max source length: 4096
+Max target length: 8192
+input_max_length in interleaved_tokenized_dataset: 4096
+label_max_length in interleaved_tokenized_dataset: 8192
+Eval Num: 8
+Raw text statistics for training data:
+Input text - Min: 102, Max: 266, Avg: 156.62
+Label text - Min: 435, Max: 4886, Avg: 1444.12
+Max source length: 4096
+Max target length: 8192
+input_max_length in interleaved_tokenized_dataset: 4096
+label_max_length in interleaved_tokenized_dataset: 8192
+input_max_length in interleaved_tokenized_dataset: 4096
+label_max_length in interleaved_tokenized_dataset: 8192
+Eval Num: 8
+Raw text statistics for training data:
+Input text - Min: 102, Max: 266, Avg: 156.62
+Label text - Min: 435, Max: 4886, Avg: 1444.12
+Max source length: 4096
+Max target length: 8192
+input_max_length in interleaved_tokenized_dataset: 4096
+label_max_length in interleaved_tokenized_dataset: 8192
+Eval Num: 8
+Raw text statistics for training data:
+Input text - Min: 102, Max: 266, Avg: 156.62
+Label text - Min: 435, Max: 4886, Avg: 1444.12
+Max source length: 4096
+Max target length: 8192
+input_max_length in interleaved_tokenized_dataset: 4096
+label_max_length in interleaved_tokenized_dataset: 8192
+model.layers.0.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.0.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.0.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.0.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.0.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.0.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.0.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.0.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.1.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.1.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.1.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.1.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.1.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.1.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.1.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.1.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.2.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.2.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.2.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.2.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.2.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.2.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.2.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.2.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.3.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.3.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.3.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.3.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.3.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.3.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.3.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.3.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.4.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.4.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.4.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.4.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.4.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.4.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.4.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.4.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.5.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.5.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.5.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.5.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.5.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.5.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.5.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.5.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.6.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.6.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.6.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.6.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.6.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.6.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.6.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.6.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.7.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.7.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.7.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.7.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.7.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.7.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.7.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.7.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.8.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.8.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.8.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.8.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.8.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.8.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.8.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.8.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.9.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.9.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.9.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.9.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.9.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.9.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.9.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.9.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.10.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.10.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.10.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.10.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.10.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.10.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.10.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.10.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.11.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.11.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.11.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.11.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.11.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.11.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.11.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.11.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.12.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.12.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.12.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.12.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.12.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.12.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.12.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.12.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.13.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.13.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.13.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.13.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.13.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.13.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.13.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.13.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.14.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.14.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.14.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.14.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.14.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.14.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.14.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.14.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.15.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.15.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.15.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.15.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.15.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.15.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.15.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.15.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.16.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.16.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.16.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.16.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.16.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.16.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.16.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.16.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.17.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.17.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.17.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.17.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.17.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.17.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.17.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.17.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.18.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.18.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.18.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.18.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.18.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.18.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.18.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.18.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.19.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.19.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.19.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.19.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.19.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.19.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.19.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.19.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.20.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.20.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.20.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.20.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.20.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.20.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.20.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.20.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.21.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.21.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.21.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.21.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.21.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.21.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.21.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.21.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.22.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.22.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.22.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.22.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.22.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.22.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.22.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.22.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.23.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.23.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.23.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.23.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.23.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.23.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.23.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.23.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.24.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.24.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.24.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.24.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.24.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.24.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.24.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.24.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.25.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.25.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.25.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.25.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.25.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.25.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.25.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.25.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.26.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.26.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.26.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.26.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.26.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.26.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.26.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.26.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.27.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.27.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.27.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.27.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.27.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.27.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.27.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.27.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.28.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.28.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.28.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.28.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.28.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.28.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.28.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.28.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.29.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.29.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.29.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.29.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.29.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.29.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.29.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.29.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.30.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.30.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.30.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.30.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.30.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.30.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.30.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.30.self_attn.o_proj.lora_B.default.weight requires_grad: True
+model.layers.31.self_attn.q_proj.lora_A.default.weight requires_grad: True
+model.layers.31.self_attn.q_proj.lora_B.default.weight requires_grad: True
+model.layers.31.self_attn.k_proj.lora_A.default.weight requires_grad: True
+model.layers.31.self_attn.k_proj.lora_B.default.weight requires_grad: True
+model.layers.31.self_attn.v_proj.lora_A.default.weight requires_grad: True
+model.layers.31.self_attn.v_proj.lora_B.default.weight requires_grad: True
+model.layers.31.self_attn.o_proj.lora_A.default.weight requires_grad: True
+model.layers.31.self_attn.o_proj.lora_B.default.weight requires_grad: True
+lm_head.modules_to_save.default.weight requires_grad: True
+Loading model from /workspace/anole_training/outputs/anole_train/anole_trainimage_seq_len-1024-train-anole-hyper-train1val1lr3e-05-geometry_reasoning-prompt_anole-42/checkpoint-250
+input_max_length in interleaved_tokenized_dataset: 4096
+label_max_length in interleaved_tokenized_dataset: 8192
+input_max_length in interleaved_tokenized_dataset: 4096
+label_max_length in interleaved_tokenized_dataset: 8192
+Eval Num: 8
+Raw text statistics for training data:
+Input text - Min: 102, Max: 266, Avg: 156.62
+Label text - Min: 435, Max: 4886, Avg: 1444.12
+Max source length: 4096
+Max target length: 8192
+input_max_length in interleaved_tokenized_dataset: 4096
+label_max_length in interleaved_tokenized_dataset: 8192
+input_max_length in interleaved_tokenized_dataset: 4096
+label_max_length in interleaved_tokenized_dataset: 8192
+input_max_length in interleaved_tokenized_dataset: 4096
+label_max_length in interleaved_tokenized_dataset: 8192
+tokenized_data: {'train': <utils.interleaved_tokenized_dataset.InterleaveAnoleTokenizedDataset object at 0x7f2f6154af90>, 'eval': <utils.interleaved_tokenized_dataset.InterleaveAnoleTokenizedDataset object at 0x7f31a81ffbc0>, 'test': <utils.interleaved_tokenized_dataset.InterleaveAnoleTokenizedDataset object at 0x7f2f6124b7a0>}
+generation_max_new_tokens: 8292
+input_max_length in interleaved_tokenized_dataset: 4096
+label_max_length in interleaved_tokenized_dataset: 8192
+input_max_length in interleaved_tokenized_dataset: 4096
+label_max_length in interleaved_tokenized_dataset: 8192
+tokenized_data: {'train': <utils.interleaved_tokenized_dataset.InterleaveAnoleTokenizedDataset object at 0x7f206a137860>, 'eval': <utils.interleaved_tokenized_dataset.InterleaveAnoleTokenizedDataset object at 0x7f206adcdee0>, 'test': <utils.interleaved_tokenized_dataset.InterleaveAnoleTokenizedDataset object at 0x7f2069ca3f80>}
+generation_max_new_tokens: 8292
+input_max_length in interleaved_tokenized_dataset: 4096
+label_max_length in interleaved_tokenized_dataset: 8192
+input_max_length in interleaved_tokenized_dataset: 4096
+label_max_length in interleaved_tokenized_dataset: 8192
+Trainer build successfully.
+Trainer build successfully.
+input_max_length in interleaved_tokenized_dataset: 4096
+label_max_length in interleaved_tokenized_dataset: 8192
+input_max_length in interleaved_tokenized_dataset: 4096
+label_max_length in interleaved_tokenized_dataset: 8192
+input_max_length in interleaved_tokenized_dataset: 4096
+label_max_length in interleaved_tokenized_dataset: 8192
+input_max_length in interleaved_tokenized_dataset: 4096
+label_max_length in interleaved_tokenized_dataset: 8192
+tokenized_data: {'train': <utils.interleaved_tokenized_dataset.InterleaveAnoleTokenizedDataset object at 0x7f7c4e8f70b0>, 'eval': <utils.interleaved_tokenized_dataset.InterleaveAnoleTokenizedDataset object at 0x7f7a3c6cb890>, 'test': <utils.interleaved_tokenized_dataset.InterleaveAnoleTokenizedDataset object at 0x7f7a00693f50>}
+generation_max_new_tokens: 8292
+input_max_length in interleaved_tokenized_dataset: 4096
+label_max_length in interleaved_tokenized_dataset: 8192
+tokenized_data: {'train': <utils.interleaved_tokenized_dataset.InterleaveAnoleTokenizedDataset object at 0x7fd7239f4a10>, 'eval': <utils.interleaved_tokenized_dataset.InterleaveAnoleTokenizedDataset object at 0x7fd5102d7c20>, 'test': <utils.interleaved_tokenized_dataset.InterleaveAnoleTokenizedDataset object at 0x7fd5089857c0>}
+generation_max_new_tokens: 8292
+tokenized_data: {'train': <utils.interleaved_tokenized_dataset.InterleaveAnoleTokenizedDataset object at 0x7fbc004af7d0>, 'eval': <utils.interleaved_tokenized_dataset.InterleaveAnoleTokenizedDataset object at 0x7fbe1b029f10>, 'test': <utils.interleaved_tokenized_dataset.InterleaveAnoleTokenizedDataset object at 0x7fbe1af42ed0>}
+generation_max_new_tokens: 8292
+tokenized_data: {'train': <utils.interleaved_tokenized_dataset.InterleaveAnoleTokenizedDataset object at 0x7fb941670830>, 'eval': <utils.interleaved_tokenized_dataset.InterleaveAnoleTokenizedDataset object at 0x7fb9744a0800>, 'test': <utils.interleaved_tokenized_dataset.InterleaveAnoleTokenizedDataset object at 0x7fb941284c80>}
+generation_max_new_tokens: 8292
+Trainer build successfully.
+tokenized_data: {'train': <utils.interleaved_tokenized_dataset.InterleaveAnoleTokenizedDataset object at 0x7fec237b85f0>, 'eval': <utils.interleaved_tokenized_dataset.InterleaveAnoleTokenizedDataset object at 0x7fec18d8fb30>, 'test': <utils.interleaved_tokenized_dataset.InterleaveAnoleTokenizedDataset object at 0x7fee39b4dbe0>}
+generation_max_new_tokens: 8292
+Trainer build successfully.
+tokenized_data: {'train': <utils.interleaved_tokenized_dataset.InterleaveAnoleTokenizedDataset object at 0x7f82e85b1a90>, 'eval': <utils.interleaved_tokenized_dataset.InterleaveAnoleTokenizedDataset object at 0x7f80a1667d40>, 'test': <utils.interleaved_tokenized_dataset.InterleaveAnoleTokenizedDataset object at 0x7f80a179d700>}
+generation_max_new_tokens: 8292
+Trainer build successfully.
+Trainer build successfully.
+Trainer build successfully.
+Trainer build successfully.
+********************
+8
+8
+********************
+saved sketch to outputs/vlm_reasoning_eval/vlm_reasoning_evalimage_seq_len-1024-anole-hyper-train1val1lr3e-05-geometry_reasoning-prompt_anole-42/sketch_eval_None/1_0_eval_None.png
+saved sketch to outputs/vlm_reasoning_eval/vlm_reasoning_evalimage_seq_len-1024-anole-hyper-train1val1lr3e-05-geometry_reasoning-prompt_anole-42/sketch_eval_None/1_0_eval_None.png
+saved sketch to outputs/vlm_reasoning_eval/vlm_reasoning_evalimage_seq_len-1024-anole-hyper-train1val1lr3e-05-geometry_reasoning-prompt_anole-42/sketch_eval_None/3_0_eval_None.png
+saved sketch to outputs/vlm_reasoning_eval/vlm_reasoning_evalimage_seq_len-1024-anole-hyper-train1val1lr3e-05-geometry_reasoning-prompt_anole-42/sketch_eval_None/3_0_eval_None.png
+saved sketch to outputs/vlm_reasoning_eval/vlm_reasoning_evalimage_seq_len-1024-anole-hyper-train1val1lr3e-05-geometry_reasoning-prompt_anole-42/sketch_eval_None/4_0_eval_None.png
+saved sketch to outputs/vlm_reasoning_eval/vlm_reasoning_evalimage_seq_len-1024-anole-hyper-train1val1lr3e-05-geometry_reasoning-prompt_anole-42/sketch_eval_None/4_0_eval_None.png
+saved sketch to outputs/vlm_reasoning_eval/vlm_reasoning_evalimage_seq_len-1024-anole-hyper-train1val1lr3e-05-geometry_reasoning-prompt_anole-42/sketch_eval_None/4_1_eval_None.png
+saved sketch to outputs/vlm_reasoning_eval/vlm_reasoning_evalimage_seq_len-1024-anole-hyper-train1val1lr3e-05-geometry_reasoning-prompt_anole-42/sketch_eval_None/4_1_eval_None.png
+saved sketch to outputs/vlm_reasoning_eval/vlm_reasoning_evalimage_seq_len-1024-anole-hyper-train1val1lr3e-05-geometry_reasoning-prompt_anole-42/sketch_eval_None/5_0_eval_None.png
+saved sketch to outputs/vlm_reasoning_eval/vlm_reasoning_evalimage_seq_len-1024-anole-hyper-train1val1lr3e-05-geometry_reasoning-prompt_anole-42/sketch_eval_None/5_0_eval_None.png
+saved sketch to outputs/vlm_reasoning_eval/vlm_reasoning_evalimage_seq_len-1024-anole-hyper-train1val1lr3e-05-geometry_reasoning-prompt_anole-42/sketch_eval_None/0_0_eval_None.png
+saved sketch to outputs/vlm_reasoning_eval/vlm_reasoning_evalimage_seq_len-1024-anole-hyper-train1val1lr3e-05-geometry_reasoning-prompt_anole-42/sketch_eval_None/0_0_eval_None.png
+***** eval metrics *****
+  eval_runtime            = 0:03:04.84
+  eval_samples            =          8
+  eval_samples_per_second =      0.043

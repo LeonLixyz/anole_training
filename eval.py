@@ -159,10 +159,10 @@ def init(args):
         training_args.report_to = []
 
     # Detect the checkpoint
-    if args.model_ckpt is not None:
-        training_args.load_weights_from = get_last_checkpoint(args.model_ckpt)
-    else:
+    if args.model_ckpt == "x":
         training_args.load_weights_from = None
+    else:
+        training_args.load_weights_from = get_last_checkpoint(args.model_ckpt)
 
     return training_args
 
@@ -213,6 +213,9 @@ if __name__ == '__main__':
     parser.add_argument('--train_bz', type=int, default=None)
     parser.add_argument('--val_bz', type=int, default=None)
     parser.add_argument('--grad_acc', type=int, default=None)
+
+    # new argument
+    parser.add_argument('--skip_metrics', action='store_true', default=True, help='Skip metric / loss computation during evaluation and only generate images.')
 
     args = parser.parse_args()
 
@@ -291,7 +294,13 @@ if __name__ == '__main__':
         data_name = "-".join(args.data),
     )
 
-    training_args.generation_max_new_tokens = max_target_length + 100
+    if 'test' not in tokenized_data and 'eval' not in tokenized_data:
+        print("No test or eval dataset found in tokenized data, using train dataset instead")
+        tokenized_data['test'] = tokenized_data['train']
+        tokenized_data['eval'] = tokenized_data['train']
+
+    print(f"tokenized_data: {tokenized_data}")
+    training_args.generation_max_new_tokens = 8192 * 2
     print(f"generation_max_new_tokens: {training_args.generation_max_new_tokens}")
 
     early_stopping_callback = EarlyStoppingCallback(
@@ -338,6 +347,21 @@ if __name__ == '__main__':
     checkpoint = None
     if training_args.load_weights_from is not None:
         checkpoint = training_args.load_weights_from
+
+    # --------------------------------------------------------
+    # Optional: disable loss & metric computation during eval
+    # --------------------------------------------------------
+    if args.skip_metrics:
+        # 1) Replace compute_metrics with a no-op function so that _post_process_function still runs
+        trainer.compute_metrics = lambda *_, **__: {}
+        trainer.evaluator = None  # Not needed when metrics are skipped
+
+        # 2) Replace compute_loss with a cheap stub to avoid forward-pass loss calculation during evaluation
+        import types, torch
+        def _dummy_compute_loss(self, model, inputs, return_outputs=False):
+            zero = torch.tensor(0.0, device=model.device)
+            return (zero, None) if return_outputs else zero
+        trainer.compute_loss = types.MethodType(_dummy_compute_loss, trainer)
 
     # NOTE: train the model with supervision
     if args.do_train:

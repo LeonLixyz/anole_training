@@ -47,8 +47,8 @@ class InterleaveAnoleTokenizedDataset(Dataset):
 
         self.input_max_length = input_max_length
         self.label_max_length = label_max_length
-        print(f"input_max_length in interleaved_tokenized_dataset: {self.input_max_length}")
-        print(f"label_max_length in interleaved_tokenized_dataset: {self.label_max_length}")
+        # print(f"input_max_length in interleaved_tokenized_dataset: {self.input_max_length}")
+        # print(f"label_max_length in interleaved_tokenized_dataset: {self.label_max_length}")
         
         self.label_processor = copy.deepcopy(self.processor)
         self.label_processor.tokenizer.padding_side = "right"
@@ -104,25 +104,25 @@ class InterleaveAnoleTokenizedDataset(Dataset):
             tokenized_input = self.processor(
                 [input_text],
                 images=input_imgs if input_imgs else None,
-                padding="max_length",
+                padding="longest",
                 truncation=True,
                 return_tensors="pt",
                 max_length=self.input_max_length
             )
             
-            print(f"Input text tokens: {(tokenized_input['input_ids'] != self.processor.tokenizer.pad_token_id).sum().item()}")
+            # print(f"Input text tokens: {(tokenized_input['input_ids'] != self.processor.tokenizer.pad_token_id).sum().item()}")
             
             tokenized_label = self.label_processor(
                 [label_text],          # for padding
                 images=label_imgs if label_imgs else None,
-                padding="max_length",
+                padding="longest",
                 truncation=True,
                 return_tensors="pt",
                 max_length=self.label_max_length,
             )
             tokenized_label = {k: v[:, 1:] if k in ['input_ids', 'attention_mask'] else v for k, v in tokenized_label.items()}     # omit <s> starting token
             
-            print(f"Label text tokens: {(tokenized_label['input_ids'] != self.processor.tokenizer.pad_token_id).sum().item()}")
+            # print(f"Label text tokens: {(tokenized_label['input_ids'] != self.processor.tokenizer.pad_token_id).sum().item()}")
             
             if label_imgs:
                 # Get exactly 1024 image tokens regardless of how many tokens the model expects
@@ -131,7 +131,7 @@ class InterleaveAnoleTokenizedDataset(Dataset):
                 image_token_mask = tokenized_label['input_ids'] == self.model.config.image_token_id
                 # Count how many image tokens we need
                 num_image_tokens = image_token_mask.sum().item()
-                print(f"Label image tokens: {num_image_tokens}")
+                # print(f"Label image tokens: {num_image_tokens}")
                 
                 # If we have more than 1024 placeholders, we need to truncate
                 if num_image_tokens > 1024:
@@ -163,7 +163,7 @@ class InterleaveAnoleTokenizedDataset(Dataset):
                 image_tokens = self.model.model.model.get_image_tokens(tokenized_input['pixel_values'].to(self.model.device).to(torch.bfloat16))
                 image_token_mask = tokenized_input['input_ids'] == self.model.config.image_token_id
                 num_image_tokens = image_token_mask.sum().item()
-                print(f"Input image tokens: {num_image_tokens}")
+                # print(f"Input image tokens: {num_image_tokens}")
                 
                 if num_image_tokens > 1024:
                     image_token_indices = torch.where(image_token_mask)[1]
@@ -190,6 +190,7 @@ class InterleaveAnoleTokenizedDataset(Dataset):
             tokenized_input['attention_mask'] = torch.cat([tokenized_input.pop('attention_mask'), tokenized_label["attention_mask"]], 1)
             
             print(f"Total tokens in combined input: {tokenized_input['input_ids'].shape[1]}")
+            print("--------------------------------")
 
             return {
                 **tokenized_input,
@@ -200,7 +201,7 @@ class InterleaveAnoleTokenizedDataset(Dataset):
             tokenized_input = self.processor(
                 text=input_text,
                 images=input_imgs if input_imgs else None,
-                padding="max_length",
+                padding="longest",
                 truncation=True,
                 return_tensors="pt",
                 max_length=self.input_max_length
@@ -209,12 +210,12 @@ class InterleaveAnoleTokenizedDataset(Dataset):
             if input_imgs:
                 image_tokens = self.model.model.model.get_image_tokens(tokenized_input['pixel_values'].to(self.model.device).to(torch.bfloat16))
                 image_token_count = tokenized_input['input_ids'][tokenized_input['input_ids'] == self.model.config.image_token_id].shape[0] 
-                print(f"Input image tokens (eval/test): {image_token_count}")
+                # print(f"Input image tokens (eval/test): {image_token_count}")
                 tokenized_input['input_ids'][tokenized_input['input_ids'] == self.model.config.image_token_id] = image_tokens.to(torch.int64).to(tokenized_input['input_ids'].device).reshape(-1)[:image_token_count]
                 _ = tokenized_input.pop("pixel_values")
                 
-            print(f"Input text tokens (eval/test): {(tokenized_input['input_ids'] != self.processor.tokenizer.pad_token_id).sum().item()}")
-            print(f"Total tokens (eval/test): {tokenized_input['input_ids'].shape[1]}")
+            # print(f"Input text tokens (eval/test): {(tokenized_input['input_ids'] != self.processor.tokenizer.pad_token_id).sum().item()}")
+            # print(f"Total tokens (eval/test): {tokenized_input['input_ids'].shape[1]}")
             
             return {
                 **tokenized_input,
@@ -232,3 +233,4 @@ class InterleaveAnoleTokenizedDataset(Dataset):
             reconstructed_img = self.processor.postprocess_pixel_values(reconstructed_img_pixels).squeeze()
             reconstructed_img = Image.fromarray(reconstructed_img.permute(1, 2, 0).detach().cpu().numpy())
         return reconstructed_img
+
