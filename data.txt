@@ -1,0 +1,22 @@
+
+------------------------------------------------------------ 
+Category counts (train / eval / total):
+  • arc_agi: 982 / 16 / 998
+  • checkers: 2739 / 16 / 2755
+  • chem: 4651 / 16 / 4667
+  • chess: 11468 / 16 / 11484
+  • ciphers: 4048 / 16 / 4064
+  • competitive_cs: 1191 / 16 / 1207
+  • connect4: 2115 / 16 / 2131
+  • embodied_cot: 22650 / 16 / 22666
+  • graph: 3984 / 16 / 4000
+  • math_geometry: 1045 / 16 / 1061
+  • mazes: 11639 / 16 / 11655
+  • physics: 40 / 16 / 56
+  • raven_cot: 2984 / 16 / 3000
+  • robot_planning: 6928 / 16 / 6944
+  • tetris: 9813 / 16 / 9829
+  • visual_jigsaw: 21889 / 16 / 21905
+  • visual_search: 30542 / 16 / 30558
+------------------------------------------------------------
+✅  Finished – 138708 train + 272 test examples written.

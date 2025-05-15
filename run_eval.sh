@@ -17,7 +17,7 @@ NOTE="vlm_reasoning_eval"
 DATASET="geometry_reasoning" 
 DATA_DIR="/workspace/anole_training/formatted_data"
 FORMATTED_DATA_PATH="/workspace/anole_training/formatted_data/selected_data_with_image_gen.json"
-MODEL_CHECKPOINT="/workspace/anole_training/outputs/anole_train/anole_trainimage_seq_len-1024-train-anole-hyper-train1val1lr3e-05-geometry_reasoning-prompt_anole-42/checkpoint-250"
+MODEL_CHECKPOINT="/workspace/anole_training/outputs/anole_train/anole_trainimage_seq_len-1024-train-anole-hyper-train1val1lr3e-05-geometry_reasoning-prompt_anole-42"
 # # Path to your trained model checkpoint
 # MODEL_CHECKPOINT="x"
 # Path to your trained model checkpoint
@@ -44,4 +44,4 @@ torchrun --nnodes $NODE_NUM \
     --do_eval \
     --model_ckpt $MODEL_CHECKPOINT \
     --custom_dataset_path "$FORMATTED_DATA_PATH" \
-    --val_bz 1
+    --val_bz 8

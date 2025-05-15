@@ -179,7 +179,7 @@ def tokenize_dataset(train_split, eval_split, test_split, model, processor, **kw
     max_source_length = 2048
     print(f"Max source length: {max_source_length}")
 
-    max_target_length = 8192 - 2048
+    max_target_length = 4096 + 1024
     print(f"Max target length: {max_target_length}")
 
     if not kwargs["interleave"]:

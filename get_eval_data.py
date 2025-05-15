@@ -6,12 +6,12 @@ with open('formatted_data/all_datasets.json', 'r') as f:
     data = json.load(f)
 
 # Select a subset of the training data (e.g., 5 samples)
-num_samples = 8
+num_samples = 64
 selected_data = random.sample(data['train'], num_samples)
 
 # Modify each selected sample by appending text for image generation
 for item in selected_data:
-    item['input_text'] = item['input_text'] + " Generate Three images to solve the problem."
+    item['input_text'] = item['input_text']
     # You can also add a key to specify that images should be generated
     item['generate_images'] = True
     

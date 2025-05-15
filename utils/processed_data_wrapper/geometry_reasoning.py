@@ -50,14 +50,14 @@ class GeometryReasoning(datasets.GeneratorBasedBuilder):
                 
                 # Create validation and test splits if not present
                 if "validation" not in raw_data and "dev" not in raw_data:
-                    val_size = max(1, int(len(train_data) * 0.1))  # 10% for validation
+                    val_size8  # 1% for validation
                     val_data = train_data[-val_size:]
                     train_data = train_data[:-val_size]
                 else:
                     val_data = raw_data.get("validation", raw_data.get("dev", []))
                 
                 if "test" not in raw_data:
-                    test_size = max(1, int(len(train_data) * 0.1))  # 10% for test
+                    test_size = 8  # 1% for test
                     test_data = train_data[-test_size:]
                     train_data = train_data[:-test_size]
                 else:
@@ -66,8 +66,8 @@ class GeometryReasoning(datasets.GeneratorBasedBuilder):
                 # Data is just a list, split it
                 all_data = raw_data if isinstance(raw_data, list) else raw_data["train"]
                 total = len(all_data)
-                val_size = max(1, int(total * 0.1))
-                test_size = max(1, int(total * 0.1))
+                val_size = 8  # 1% for validation
+                test_size = 8  # 1% for test
                 train_size = total - val_size - test_size
                 
                 train_data = all_data[:train_size]

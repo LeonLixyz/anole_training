@@ -1,21 +1,14 @@
 #!/usr/bin/env python
 """
-A utility script to merge multiple HuggingFace datasets into a single JSON file
-suitable for interleaved text–image reasoning tasks.
+Utility to aggregate HuggingFace VLM-reasoning datasets into a single JSON with
+(train / eval) splits.
 
-Key features
-------------
-1. **Skip already‑processed datasets** by checking both `all_datasets.json` *and*
-   the presence of a dataset‑specific folder.
-2. **Shuffle the combined dataset on *every* run**, whether or not new data is
-   added.  This ensures training randomness without requiring an extra step.
-
-Usage (example):
-    python format_datasets.py --output_dir formatted_data
-
-Add `--debug` to limit each dataset to 5 examples while iterating.
+2025-05-14  –  *chunk-aware* revision
+2025-05-15  –  *cached-source* hot-fix #1
+2025-05-15  –  *cached-source* hot-fix #2  ← this file
+     · overwrite stale dataset_source values from old caches
+     · drop stale category so it’s recomputed
 """
-
 from __future__ import annotations
 
 import argparse
@@ -24,228 +17,312 @@ import json
 import os
 import random
 import re
+import threading
+from collections import defaultdict
+from concurrent.futures import ThreadPoolExecutor
 from io import BytesIO
-from typing import Any, Dict, List, Set
+from typing import Any, Dict, List
 
 from PIL import Image
-from datasets import concatenate_datasets, load_dataset
+from datasets import concatenate_datasets, get_dataset_config_names, load_dataset
 
 ###############################################################################
-# Helper utilities
+# Console helpers
+###############################################################################
+_lock = threading.RLock()
+
+
+def log(*args, **kw):
+    with _lock:
+        print(*args, **kw)
+
+
+###############################################################################
+# Path helpers
 ###############################################################################
 
-def base64_to_image(base64_str: str) -> Image.Image:
-    """Convert a base‑64 string (optionally with a data‑URI prefix) to a PIL image."""
-    if not base64_str.startswith("data:"):
-        base64_str = f"data:image/jpeg;base64,{base64_str}"
-    _, encoded = base64_str.split(",", 1)
-    return Image.open(BytesIO(base64.b64decode(encoded))).convert("RGB")
+
+def done_flag(dir_: str) -> bool:
+    fp = os.path.join(dir_, "formatted_data.json")
+    return os.path.isfile(fp) and os.path.getsize(fp) > 10
 
 
-def _serialise(example: Dict[str, Any]) -> Dict[str, Any]:
-    """Reduce an example to a JSON‑serialisable form."""
-    return {
-        "input_text": example["input_text"],
-        "input_img_paths": example["input_img_paths"],
-        "label_text": example["label_text"],
-        "label_img_paths": example["label_img_paths"],
-        "task": example["task"],
-        "train_task": example["train_task"],
-        "dataset_source": example.get("dataset_source", "unknown"),
+def canon_category(src: str) -> str:
+    """Extremely simple string-based category assignment that merges chunks."""
+    s = re.sub(r"/chunk_\d+$", "", src.lower())
+    s = re.sub(r"/default$", "", s)
+
+    checks = {
+        "visual search": "visual_search",
+        "visual_jigsaw": "visual_jigsaw",
+        "arc-agi": "arc_agi",
+        "graph": "graph",
+        "mazes": "mazes",
+        "physics": "physics",
+        "tetris": "tetris",
+        "math_geometry": "math_geometry",
+        "chem": "chem",
+        "robot_planning": "robot_planning",
+        "checkers": "checkers",
+        "connect4": "connect4",
+        "ciphers": "ciphers",
+        "embodied-cot": "embodied_cot",
+        "chess": "chess",
+        "raven_cot": "raven_cot",
+        "competitive_cs": "competitive_cs",
+        "zebra-cot": "zebra_cot",
     }
+    for k, v in checks.items():
+        if k in s:
+            return v
+
+    if "vlm-reasoning-cot/" in s:
+        return s.split("vlm-reasoning-cot/")[1].split("/")[0].replace("-", "_")
+
+    return s.split("/")[-1].replace("-", "_")
+
 
 ###############################################################################
-# Core formatting logic
+# Image + serialisation utils
 ###############################################################################
 
-def format_dataset(dataset, output_dir: str) -> List[Dict[str, Any]]:
-    """Format a single HuggingFace dataset split into Zebra‑CoT JSON structure."""
 
-    os.makedirs(output_dir, exist_ok=True)
-    image_dir = os.path.join(output_dir, "images")
-    os.makedirs(image_dir, exist_ok=True)
+def b64_to_img(b64: str):
+    if not b64.startswith("data:"):
+        b64 = f"data:image/jpeg;base64,{b64}"
+    return Image.open(BytesIO(base64.b64decode(b64.split(",", 1)[1]))).convert("RGB")
 
-    formatted: List[Dict[str, Any]] = []
 
-    for idx, item in enumerate(dataset):
-        question = item.get("question", "")
-        reasoning = item.get("reasoning", "")
-        answer = item.get("answer", "")
+def pick(ex: Dict[str, Any]):
+    keep = (
+        "input_text",
+        "input_img_paths",
+        "label_text",
+        "label_img_paths",
+        "task",
+        "train_task",
+        "dataset_source",
+        "category",
+    )
+    return {k: ex[k] for k in keep}
 
-        print(f"  • Example {idx + 1}/{len(dataset)}")
 
-        # ----- problem images -------------------------------------------------
-        p_imgs, p_paths = [], []
-        for i in range(1, 5):
-            b64_key, img_key = f"problem_image_{i}_base64", f"problem_image_{i}"
-            try:
-                if b64_key in item and item[b64_key]:
-                    img = base64_to_image(item[b64_key])
-                elif img_key in item and item[img_key] is not None and hasattr(item[img_key], "size"):
-                    img = item[img_key]
-                else:
-                    continue
-                path = os.path.join(image_dir, f"problem_{idx}_{i}.jpg")
-                img.save(path)
-                p_imgs.append(img)
-                p_paths.append(path)
-            except Exception as e:
-                print(f"    ⚠️  Problem image {i}: {e}")
+###############################################################################
+# Core formatter
+###############################################################################
 
-        # ----- reasoning images ----------------------------------------------
-        r_imgs, r_paths = [], []
-        for i in range(1, 5):
-            b64_key, img_key = f"reasoning_image_{i}_base64", f"reasoning_image_{i}"
-            try:
-                if b64_key in item and item[b64_key]:
-                    img = base64_to_image(item[b64_key])
-                elif img_key in item and item[img_key] is not None and hasattr(item[img_key], "size"):
-                    img = item[img_key]
-                else:
-                    continue
-                path = os.path.join(image_dir, f"reasoning_{idx}_{i}.jpg")
-                img.save(path)
-                r_imgs.append(img)
-                r_paths.append(path)
-            except Exception as e:
-                print(f"    ⚠️  Reasoning image {i}: {e}")
 
-        # ----- placeholder replacement ---------------------------------------
-        q_text = question
-        for i in range(1, len(p_imgs) + 1):
-            q_text = q_text.replace(f"<image_start>[problem_image_{i}]<image_end>", "<image>")
+def format_split(split, out_dir: str, ds_src: str):
+    os.makedirs(out_dir, exist_ok=True)
+    img_dir = os.path.join(out_dir, "images")
+    os.makedirs(img_dir, exist_ok=True)
 
-        r_text = reasoning
-        for i in range(1, len(r_imgs) + 1):
-            r_text = r_text.replace(f"<image_start>[reasoning_image_{i}]<image_end>", "<image>")
+    res = []
+    total = len(split)
+    for i, row in enumerate(split):
+        if i < 10 or i % 100 == 0 or i + 1 == total:
+            log(f"      • {i + 1}/{total}")
 
-        if answer and "FINAL ANSWER" not in r_text:
-            r_text += f"\n\nFINAL ANSWER: {answer}"
+        q, r, a = row.get("question", ""), row.get("reasoning", ""), row.get("answer", "")
 
-        formatted.append(
+        def save(kind):
+            paths = []
+            for j in range(1, 5):
+                for key in (f"{kind}_image_{j}_base64", f"{kind}_image_{j}"):
+                    blob = row.get(key)
+                    if not blob:
+                        continue
+                    try:
+                        img = b64_to_img(blob) if "base64" in key else blob
+                        p = os.path.join(img_dir, f"{kind}_{i}_{j}.jpg")
+                        img.save(p)
+                        paths.append(p)
+                        break
+                    except Exception as e:
+                        log(f"        ⚠️  {kind} {j}: {e}")
+            return paths
+
+        p_paths, r_paths = save("problem"), save("reasoning")
+        for j in range(1, len(p_paths) + 1):
+            q = q.replace(f"<image_start>[problem_image_{j}]<image_end>", "<image>")
+        for j in range(1, len(r_paths) + 1):
+            r = r.replace(f"<image_start>[reasoning_image_{j}]<image_end>", "<image>")
+        if a and "FINAL ANSWER" not in r:
+            r += f"\n\nFINAL ANSWER: {a}"
+
+        res.append(
             {
-                "input_text": f"QUESTION:\n{q_text}",
-                "input_imgs": p_imgs,
+                "input_text": f"QUESTION:\n{q}",
                 "input_img_paths": p_paths,
-                "label_text": r_text,
-                "label_imgs": r_imgs,
+                "label_text": r,
                 "label_img_paths": r_paths,
                 "task": "reasoning",
                 "train_task": "interleaved_reasoning",
+                "dataset_source": ds_src,
+                "category": canon_category(ds_src),
             }
         )
 
-    # Write per‑dataset JSON snapshot
-    with open(os.path.join(output_dir, "formatted_data.json"), "w") as fh:
-        json.dump({"train": [_serialise(x) for x in formatted]}, fh, indent=2)
-    print(f"  → Saved {len(formatted)} formatted examples to {output_dir}/formatted_data.json")
-    return formatted
+    json.dump({"train": [pick(x) for x in res]}, open(os.path.join(out_dir, "formatted_data.json"), "w"), indent=2)
+    log(f"      → Saved {len(res)} examples → {out_dir}/formatted_data.json")
+    return res
+
 
 ###############################################################################
-# Main driver
+# Download worker
 ###############################################################################
 
-def main() -> None:
-    parser = argparse.ArgumentParser(description="Aggregate and shuffle VLM reasoning datasets")
-    parser.add_argument("--dataset_names", nargs="+", type=str, default=[
-        "vlm-reasoning-cot/ARC-AGI",
-        "vlm-reasoning-cot/visual_jigsaw",
-        "vlm-reasoning-cot/graph",
-        "vlm-reasoning-cot/Mazes",
-        "vlm-reasoning-cot/Physics",
-        "vlm-reasoning-cot/Tetris",
-        "vlm-reasoning-cot/MATH_geometry",
-        "vlm-reasoning-cot/chem",
-        "vlm-reasoning-cot/robot_planning",
-        "vlm-reasoning-cot/checker",
-        "vlm-reasoning-cot/connect_4",
-        "vlm-reasoning-cot/cipher",
-        "vlm-reasoning-cot/embodied_cot",
-        "vlm-reasoning-cot/visual_search",
-        "vlm-reasoning-cot/chess",
-    ])
-    parser.add_argument("--output_dir", default="formatted_data", type=str, help="Output folder")
-    parser.add_argument("--debug", action="store_true", help="Process only 5 examples per dataset")
-    args = parser.parse_args()
 
-    os.makedirs(args.output_dir, exist_ok=True)
-    combined_json = os.path.join(args.output_dir, "all_datasets.json")
-
-    # ------------------------------------------------------------------
-    # Load existing combined data (if any)
-    # ------------------------------------------------------------------
-    processed: Set[str] = set()
-    all_examples: List[Dict[str, Any]] = []
-    if os.path.exists(combined_json):
-        print(f"Found existing combined file: {combined_json} — loading…")
-        with open(combined_json, "r") as fh:
-            obj = json.load(fh)
-        all_examples.extend(obj.get("train", []))
-        processed.update({ex.get("dataset_source", "unknown") for ex in all_examples})
-        print(f"  → {len(processed)} datasets already recorded")
-
-    # Also skip datasets whose folder already exists (guards partial runs)
-    for name in args.dataset_names:
-        if os.path.isdir(os.path.join(args.output_dir, name.split("/")[-1])):
-            processed.add(name)
-
-    # ------------------------------------------------------------------
-    # Iterate over requested datasets
-    # ------------------------------------------------------------------
-    for dname in args.dataset_names:
-        if dname in processed:
-            print(f"⏩  Skipping {dname} (already processed)")
-            continue
-
-        print("\n" + "=" * 60)
-        print(f"Processing {dname}")
-        print("=" * 60)
-
-        out_dir = os.path.join(args.output_dir, dname.split("/")[-1])
-        os.makedirs(out_dir, exist_ok=True)
-
-        # Load dataset (handle multi‑config gracefully)
-        try:
-            try:
-                ds_dict = load_dataset(dname, trust_remote_code=True)
-            except Exception as e:
-                if "Config name is missing" in str(e):
-                    cfgs = re.search(r"Please pick one among the available configs: \[(.*?)\]", str(e))
-                    if not cfgs:
-                        raise
-                    cfg_list = [c.strip("'\"") for c in cfgs.group(1).split(", ")]
-                    parts = [load_dataset(dname, cfg, trust_remote_code=True)["train"] for cfg in cfg_list]
-                    ds_dict = {"train": concatenate_datasets(parts)}
-                else:
-                    raise
-        except Exception as e:
-            print(f"⚠️  Failed to load {dname}: {e}")
-            continue
-
-        train_split = ds_dict["train"]
-        print(f"  → Loaded {len(train_split)} rows")
+def handle_dataset(name: str, cfg: str | None, odir: str, args, bucket):
+    src = f"{name}/{cfg}" if cfg else name
+    log("\n" + "=" * 60, f"\nProcessing {src}\n", "=" * 60)
+    try:
+        data = load_dataset(name, cfg, trust_remote_code=True)
+        split = data["train"] if "train" in data else concatenate_datasets(list(data.values()))
         if args.debug:
-            train_split = train_split.select(range(min(5, len(train_split))))
-            print(f"  • Debug: using {len(train_split)} rows")
+            split = split.select(range(min(5, len(split))))
+        bucket.extend(format_split(split, odir, src))
+    except Exception as e:
+        log(f"⚠️  Failed {src}: {e}")
 
-        formatted = format_dataset(train_split, out_dir)
-        for ex in formatted:
-            ex["dataset_source"] = dname
-        all_examples.extend(formatted)
+
+###############################################################################
+# Main
+###############################################################################
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--datasets_file", default="datasets.json")
+    ap.add_argument("--output_dir", default="formatted_data")
+    ap.add_argument("--workers", type=int, default=64)
+    ap.add_argument("--debug", action="store_true")
+    args = ap.parse_args()
+
+    cfg_json = json.load(open(args.datasets_file))
+    root_out = args.output_dir
+    os.makedirs(root_out, exist_ok=True)
+    datasets = cfg_json["datasets"]
+    explicit_sub = cfg_json.get("subdatasets", {})
+
+    merged: List[Dict[str, Any]] = []
+    with ThreadPoolExecutor(max_workers=args.workers) as pool:
+        futs = []
+        for ds in datasets:
+            # ------------------------------------------------------------------
+            # A) datasets that list their sub-configs explicitly (e.g. Zebra-CoT)
+            # ------------------------------------------------------------------
+            if ds in explicit_sub:
+                ds_dir = os.path.join(root_out, ds.split("/")[-1])
+                os.makedirs(ds_dir, exist_ok=True)
+                for sub in explicit_sub[ds]:
+                    out_dir = os.path.join(ds_dir, sub.replace("/", "_"))
+                    if done_flag(out_dir):
+                        merged.extend(load_cached_examples(out_dir, f"{ds}/{sub}"))
+                        continue
+                    futs.append(pool.submit(handle_dataset, ds, sub, out_dir, args, merged))
+                continue
+
+            # ------------------------------------------------------------------
+            # B) everything else – maybe multi-config, maybe not
+            # ------------------------------------------------------------------
+            try:
+                cfgs = get_dataset_config_names(ds)
+            except Exception:
+                cfgs = []
+
+            # B-1) single-config
+            if not cfgs:
+                out_dir = os.path.join(root_out, ds.split("/")[-1])
+                if done_flag(out_dir):
+                    merged.extend(load_cached_examples(out_dir, ds))
+                else:
+                    futs.append(pool.submit(handle_dataset, ds, None, out_dir, args, merged))
+                continue
+
+            # B-2) multi-config
+            base_dir = os.path.join(root_out, ds.split("/")[-1])
+            os.makedirs(base_dir, exist_ok=True)
+            for cfg_name in cfgs:
+                out_dir = os.path.join(base_dir, cfg_name)
+                if done_flag(out_dir):
+                    merged.extend(load_cached_examples(out_dir, f"{ds}/{cfg_name}"))
+                    continue
+                futs.append(pool.submit(handle_dataset, ds, cfg_name, out_dir, args, merged))
+
+        for f in futs:
+            f.result()
 
     # ------------------------------------------------------------------
-    # SHUFFLE!  Always randomise order, even if no new data were added.
+    # Shuffle & stratified 16-shot eval split per category
     # ------------------------------------------------------------------
-    random.shuffle(all_examples)
+    random.shuffle(merged)
+    cat_map = defaultdict(list)
+    for ex in merged:
+        cat = ex.get("category") or canon_category(ex["dataset_source"])
+        ex["category"] = cat
+        cat_map[cat].append(ex)
 
-    # ------------------------------------------------------------------
-    # Write combined JSON
-    # ------------------------------------------------------------------
-    with open(combined_json, "w") as fh:
-        json.dump({"train": [_serialise(ex) for ex in all_examples]}, fh, indent=2)
+    train, eval_ = [], []
+    for li in cat_map.values():
+        eval_.extend(li[:16])
+        train.extend(li[16:])
 
-    print("\n✅  All done — combined dataset contains", len(all_examples), "examples")
-    print("    Shuffled and saved to", combined_json)
+    json.dump([pick(x) for x in train], open(os.path.join(root_out, "train_dataset.json"), "w"), indent=2)
+    json.dump([pick(x) for x in eval_], open(os.path.join(root_out, "test_datasets.json"), "w"), indent=2)
+
+    log("\n" + "-" * 60, "\nCategory counts (train / eval / total):")
+    for c in sorted(cat_map):
+        log(f"  • {c}: {max(0, len(cat_map[c]) - 16)} / {min(16, len(cat_map[c]))} / {len(cat_map[c])}")
+    log("-" * 60)
+    log(f"✅  Finished – {len(train)} train + {len(eval_)} test examples written.")
+
+
+###############################################################################
+# Cache helpers
+###############################################################################
+
+
+def cached_example_cnt(dir_: str) -> int | None:
+    fp = os.path.join(dir_, "formatted_data.json")
+    if not os.path.isfile(fp):
+        return None
+    try:
+        data = json.load(open(fp))
+        if isinstance(data, dict):
+            return sum(len(v) for v in data.values() if isinstance(v, list))
+    except Exception:
+        pass
+    return None
+
+
+def load_cached_examples(dir_: str, src_hint: str | None = None) -> List[Dict[str, Any]]:
+    """
+    Load examples already on disk.  If *src_hint* is provided we **force-overwrite**
+    each record’s ``dataset_source`` with that path and delete any stale
+    ``category`` so it can be recomputed cleanly.
+    """
+    fp = os.path.join(dir_, "formatted_data.json")
+    if not os.path.isfile(fp):
+        return []
+
+    try:
+        data = json.load(open(fp))
+        exs: List[Dict[str, Any]] = []
+        for v in data.values():
+            if isinstance(v, list):
+                exs.extend(v)
+
+        if src_hint is not None:
+            for ex in exs:
+                ex["dataset_source"] = src_hint
+                if "category" in ex:
+                    del ex["category"]
+
+        return exs
+    except Exception as e:
+        log(f"⚠️  Could not load cached examples from {fp}: {e}")
+        return []
 
 
 if __name__ == "__main__":

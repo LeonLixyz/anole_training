@@ -15,7 +15,7 @@ OUTPUT_PATH="outputs/anole_train"
 NOTE="anole_train"
 DATASET="geometry_reasoning" 
 DATA_DIR="/workspace/anole_training/formatted_data"  # Point to our formatted data directory
-FORMATTED_DATA_PATH="/workspace/anole_training/formatted_data/all_datasets.json"  # Path to our formatted JSON
+FORMATTED_DATA_PATH="/workspace/anole_training/formatted_data/train_dataset.json"  # Path to our formatted JSON
 
 # Create data directory if it doesn't exist
 mkdir -p $DATA_DIR

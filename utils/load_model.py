@@ -49,13 +49,14 @@ def load_model(args):
         from peft.peft_model import PeftModel
 
         config = LoraConfig(
-            r=128,
-            lora_alpha=256,
+            r=512,
+            lora_alpha=1024,
             target_modules=['q_proj', "k_proj", "v_proj", "o_proj", "gate_proj", "down_proj", "up_proj"],
             lora_dropout=0.05,
             bias="none",
             modules_to_save=["lm_head"],
         )
+        print(f"config: {config}")
         lora_model = get_peft_model(model, config)
         #print required_grad
 

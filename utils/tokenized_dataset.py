@@ -101,7 +101,7 @@ class AnoleTokenizedDataset(Dataset):
             tokenized_input = self.processor(
                 text=input_str,
                 images=input_img,
-                padding="longest",
+                padding="max_length",
                 return_tensors="pt",
                 max_length=self.input_max_length
             )
