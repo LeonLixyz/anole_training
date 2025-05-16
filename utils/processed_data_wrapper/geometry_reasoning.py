@@ -50,7 +50,7 @@ class GeometryReasoning(datasets.GeneratorBasedBuilder):
                 
                 # Create validation and test splits if not present
                 if "validation" not in raw_data and "dev" not in raw_data:
-                    val_size8  # 1% for validation
+                    val_size = 8  # 1% for validation
                     val_data = train_data[-val_size:]
                     train_data = train_data[:-val_size]
                 else:

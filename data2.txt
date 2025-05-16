@@ -1,0 +1,17 @@
+Discovered 2 dataset splits:
+  • vlm-reasoning-cot/2D_Visual_Reasoning :: Visual Jigsaw
+  • vlm-reasoning-cot/2D_Visual_Reasoning :: Visual Search
+
+============================================================
+Processing vlm-reasoning-cot/2D_Visual_Reasoning :: Visual Jigsaw
+============================================================
+  → Loaded 21905 rows
+  → Saved 21905 formatted examples → formatted_data/vlm-reasoning-cot__2D_Visual_Reasoning__Visual Jigsaw/formatted_data.json
+
+============================================================
+Processing vlm-reasoning-cot/2D_Visual_Reasoning :: Visual Search
+============================================================
+  → Loaded 30558 rows
+  → Saved 30558 formatted examples → formatted_data/vlm-reasoning-cot__2D_Visual_Reasoning__Visual Search/formatted_data.json
+
+✅  Done – combined dataset has 52463 examples → formatted_data/train_dataset.json

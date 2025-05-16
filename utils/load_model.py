@@ -49,8 +49,8 @@ def load_model(args):
         from peft.peft_model import PeftModel
 
         config = LoraConfig(
-            r=512,
-            lora_alpha=1024,
+            r=128,
+            lora_alpha=256,
             target_modules=['q_proj', "k_proj", "v_proj", "o_proj", "gate_proj", "down_proj", "up_proj"],
             lora_dropout=0.05,
             bias="none",

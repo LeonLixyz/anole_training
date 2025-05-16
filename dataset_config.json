@@ -1,0 +1,62 @@
+[
+    {
+      "original_dataset": "vlm-reasoning-cot/ARC-AGI",
+      "hf_repo_id": "vlm-reasoning-cot/Visual_Logic_and_Strategic_Games",
+      "subdataset_name": "ARC-AGI",
+      "num_chunks": 0
+    },
+    {
+      "original_dataset": "vlm-reasoning-cot/visual_jigsaw",
+      "hf_repo_id": "vlm-reasoning-cot/2D_Visual_Reasoning",
+      "subdataset_name": "Visual Jigsaw",
+      "num_chunks": 22
+    },
+    {
+      "original_dataset": "vlm-reasoning-cot/Zebra-CoT",
+      "hf_repo_id": "vlm-reasoning-cot/2D_Visual_Reasoning",
+      "subdataset_name": "Visual Search",
+      "num_chunks": 31
+    },
+    {
+      "original_dataset": "vlm-reasoning-cot/chem",
+      "hf_repo_id": "vlm-reasoning-cot/Scientific_Reasoning",
+      "subdataset_name": "Chemistry",
+      "num_chunks": 5
+    },
+    {
+      "original_dataset": "vlm-reasoning-cot/graph",
+      "hf_repo_id": "vlm-reasoning-cot/Scientific_Reasoning",
+      "subdataset_name": "Graph Algorithms",
+      "num_chunks": 4
+    },
+    {
+      "original_dataset": "vlm-reasoning-cot/competitive_cs",
+      "hf_repo_id": "vlm-reasoning-cot/Scientific_Reasoning",
+      "subdataset_name": "Competitive Programming",
+      "num_chunks": 2
+    },
+    {
+      "original_dataset": "vlm-reasoning-cot/physics",
+      "hf_repo_id": "vlm-reasoning-cot/Scientific_Reasoning",
+      "subdataset_name": "Physics",
+      "num_chunks": 0
+    },
+    {
+      "original_dataset": "vlm-reasoning-cot/Math_geometry",
+      "hf_repo_id": "vlm-reasoning-cot/Scientific_Reasoning",
+      "subdataset_name": "Geometry",
+      "num_chunks": 0
+    },
+    {
+      "original_dataset": "vlm-reasoning-cot/robot_planning",
+      "hf_repo_id": "vlm-reasoning-cot/3D_Visual_Reasoning",
+      "subdataset_name": "Robot Planning",
+      "num_chunks": 7
+    },
+    {
+      "original_dataset": "vlm-reasoning-cot/embodied-cot",
+      "hf_repo_id": "vlm-reasoning-cot/3D_Visual_Reasoning",
+      "subdataset_name": "Embodied CoT",
+      "num_chunks": 23
+    }
+  ] 
