@@ -98,7 +98,7 @@ class InterleaveAnoleTokenizedDataset(Dataset):
         else:
             label_imgs = item['label_imgs']
 
-        input_imgs = [self.augment_image(img, random.randint(0, 8)) for img in input_imgs]
+        # input_imgs = [self.augment_image(img, random.randint(0, 8)) for img in input_imgs]
 
         if self.split in ['train']:
             tokenized_input = self.processor(
