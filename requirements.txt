@@ -4,3 +4,4 @@ wandb
 datasets
 flash-attn 
 evaluate
+pillow

@@ -30,8 +30,8 @@ class AnoleTokenizedDataset(Dataset):
         self.split = split
         self.dataset = dataset
 
-        print(f"input_max_length in tokenized_dataset: {input_max_length}")
-        print(f"label_max_length in tokenized_dataset: {label_max_length}")
+        # print(f"input_max_length in tokenized_dataset: {input_max_length}")
+        # print(f"label_max_length in tokenized_dataset: {label_max_length}")
 
         format_json = os.path.join('prompt', input_format + '.json')
         with open(format_json) as f:

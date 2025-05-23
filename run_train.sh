@@ -7,15 +7,15 @@ rm -rf outputs/anole_train
 
 # Configuration values
 NODE_NUM=1
-GPU_NUM_PER_NODE=8
+GPU_NUM_PER_NODE=1
 RANK=0
 MASTER_ADDR="localhost"
 MASTER_PORT=29500
 OUTPUT_PATH="outputs/anole_train"
 NOTE="anole_train"
 DATASET="geometry_reasoning" 
-DATA_DIR="/workspace/anole_training/formatted_data"  # Point to our formatted data directory
-FORMATTED_DATA_PATH="/workspace/anole_training/formatted_data/train_dataset.json"  # Path to our formatted JSON
+DATA_DIR="/home/jovyan/workspace/anole_training/formatted_data"  # Point to our formatted data directory
+FORMATTED_DATA_PATH="/home/jovyan/workspace/anole_training/formatted_data/train_dataset.json"  # Path to our formatted JSON
 
 # Create data directory if it doesn't exist
 mkdir -p $DATA_DIR

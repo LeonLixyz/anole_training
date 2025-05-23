@@ -14,8 +14,8 @@ MASTER_PORT=29500
 OUTPUT_PATH="outputs/anole_train_deepspeed"
 NOTE="anole_train_deepspeed"
 DATASET="geometry_reasoning" 
-DATA_DIR="/workspace/anole_training/formatted_data"  # Point to our formatted data directory
-FORMATTED_DATA_PATH="/workspace/anole_training/formatted_data/train_dataset.json"  # Path to our formatted JSON
+DATA_DIR="/home/jovyan/workspace/anole_training/formatted_data"  # Point to our formatted data directory
+FORMATTED_DATA_PATH="/home/jovyan/workspace/anole_training/formatted_data/train_dataset.json"  # Path to our formatted JSON
 
 # Create data directory if it doesn't exist
 mkdir -p $DATA_DIR
@@ -32,6 +32,7 @@ deepspeed --num_nodes $NODE_NUM \
     --node_rank $RANK \
     --master_addr $MASTER_ADDR \
     --master_port $MASTER_PORT \
+    --deepspeed_config deepspeed_zero3_config.json \
     train.py \
     --model anole \
     --data $DATASET \
@@ -47,7 +48,6 @@ deepspeed --num_nodes $NODE_NUM \
     --save_dataset \
     --train_bz 1 \
     --val_bz 1 \
-    --grad_acc 8 \
-    --deepspeed deepspeed_zero3_config.json
+    --grad_acc 8
 
 echo "Training with DeepSpeed Zero-3 completed!" 

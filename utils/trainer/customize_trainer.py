@@ -461,11 +461,11 @@ class CustomizeSeq2SeqTrainer(Seq2SeqTrainer):
             image_logits = outputs.logits[:, :-1, :][image_mask[:, 1:], :]
 
             # for image tokens in the labels, we use model.model.model.convert_bpe2img_tokens to convert it back to visual token indices
-            vis_img_tokens = unwrapped_model.model.model.convert_bpe2img_tokens(image_labels)
+            vis_img_tokens = unwrapped_model.model.convert_bpe2img_tokens(image_labels)
             # for logits distributions from outputs.logits, we retrieve the corresponding indices from 60k dimensions 1) using torch matmul or 2) just retrieve
             image_probs = torch.nn.functional.softmax(image_logits[:, unwrapped_model.model.bpe_indices], dim=-1)
 
-            label_one_hot = torch.nn.functional.one_hot(vis_img_tokens.reshape(-1).to(torch.int64), num_classes=unwrapped_model.model.model.vqmodel.quantize.embedding.weight.shape[0]).to(torch.bfloat16)
+            label_one_hot = torch.nn.functional.one_hot(vis_img_tokens.reshape(-1).to(torch.int64), num_classes=unwrapped_model.model.vqmodel.quantize.embedding.weight.shape[0]).to(torch.bfloat16)
             label_sim_matrix = torch.matmul(label_one_hot.to(unwrapped_model.device), unwrapped_model.model.codebook_sim_matrix)
             discrepancy_loss = torch.mean(torch.sum(label_sim_matrix * image_probs.to(torch.bfloat16), -1))
 

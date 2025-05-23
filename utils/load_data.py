@@ -177,10 +177,10 @@ def tokenize_dataset(train_split, eval_split, test_split, model, processor, **kw
         print(f"Label text - Min: {min(label_lengths)}, Max: {max(label_lengths)}, Avg: {sum(label_lengths)/len(label_lengths):.2f}")
 
     max_source_length = 2048
-    print(f"Max source length: {max_source_length}")
+    # print(f"Max source length: {max_source_length}")
 
     max_target_length = 4096 + 1024
-    print(f"Max target length: {max_target_length}")
+    # print(f"Max target length: {max_target_length}")
 
     if not kwargs["interleave"]:
         tokenized_dataset_type = AnoleTokenizedDataset
